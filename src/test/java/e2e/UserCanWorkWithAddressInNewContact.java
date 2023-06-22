@@ -4,7 +4,6 @@ import api.address.Address;
 import api.contact.Contact;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.testng.annotations.Test;
