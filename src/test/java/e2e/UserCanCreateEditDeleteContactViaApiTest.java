@@ -7,7 +7,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserCanCreateEditDeleteContactViaApiTest {
     Contact contact;
@@ -34,10 +36,17 @@ public class UserCanCreateEditDeleteContactViaApiTest {
         // edit created contact TODO: PUT
         contact.editContact(200,id);
         // get data for edited contact TODO: GET
-        JsonPath actualEditedContact = contact.getContact(200, id).jsonPath();
-        Assert.assertEquals(actualEditedContact.getString("firstName"),contact.dataForEditContact(id).getFirstName());
-        Assert.assertEquals(actualEditedContact.getString("lastName"),contact.dataForEditContact(id).getLastName());
-        Assert.assertEquals(actualEditedContact.getString("description"),contact.dataForEditContact(id).getDescription());
+        JsonPath editedContact = contact.getContact(200, id).jsonPath();
+        LinkedHashMap<String,String> objectEditedData = new LinkedHashMap<>();
+        objectEditedData.put(editedContact.getString("firstName"), contact.dataForEditContact(id).getFirstName());
+        objectEditedData.put(editedContact.getString("lastName"), contact.dataForEditContact(id).getLastName());
+        objectEditedData.put(editedContact.getString("description"), contact.dataForEditContact(id).getDescription());
+
+        for (Map.Entry<String, String> object: objectEditedData.entrySet()) {
+            String actualResult =object.getKey();
+            String expectedResult = object.getValue();
+            Assert.assertEquals(actualResult,expectedResult, actualResult + "not equal" + expectedResult);
+        }
 
 
         // delete edited contact TODO: DELETE
