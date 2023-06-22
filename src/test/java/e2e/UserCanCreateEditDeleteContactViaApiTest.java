@@ -1,8 +1,8 @@
 package e2e;
 
 import api.contact.Contact;
+import io.restassured.internal.path.json.JSONAssertion;
 import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

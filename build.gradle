@@ -18,6 +18,7 @@ dependencies {
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.28'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
     implementation group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '4.2.0'
+    testImplementation 'org.skyscreamer:jsonassert:1.5.0'
 }
 
 test {
