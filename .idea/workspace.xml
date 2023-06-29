@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="added HashMap">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/address/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Deleted import">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/Languages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanCreateEditDeleteContactViaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/UserCanCreateEditDeleteContactViaApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +49,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectId" id="2RFcinJtjugmbocJrfRXxJZr6A6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,16 +70,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/ui" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="e2e.pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest">
+    <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
+      <option name="METHOD_NAME" value="createContactViaApiEditContactViaUiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
@@ -102,6 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
         <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
         <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
       </list>
@@ -137,35 +181,30 @@
       <option name="project" value="LOCAL" />
       <updated>1687455642962</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added test">
+      <created>1687465370871</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687465370871</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Deleted import">
+      <created>1687465445983</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687465445983</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
     <MESSAGE value="added HashMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="added HashMap" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added test" />
+    <MESSAGE value="Deleted import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted import" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

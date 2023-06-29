@@ -1,7 +1,6 @@
 package e2e;
 
 import api.contact.Contact;
-import io.restassured.internal.path.json.JSONAssertion;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,8 +12,9 @@ import java.util.Map;
 
 public class UserCanCreateEditDeleteContactViaApiTest {
     Contact contact;
+
     @Test
-    public void userCanCreateEditDeleteContactViaApiTest(){
+    public void userCanCreateEditDeleteContactViaApiTest() {
         contact = new Contact();
         // create new contact TODO: POST
         JsonPath createdContact = contact.createContact(201).jsonPath();
@@ -27,32 +27,31 @@ public class UserCanCreateEditDeleteContactViaApiTest {
         listPaths.add("lastName");
         listPaths.add("description");
 
-        for (String path: listPaths) {
+        for (String path : listPaths) {
             String actual = createdContact.getString(path);
             String expected = expectedCreatedContact.getString(path);
-            Assert.assertEquals(actual ,expected, "Actual parameter is not equal expected");
+            Assert.assertEquals(actual, expected, "Actual parameter is not equal expected");
         }
 
         // edit created contact TODO: PUT
-        contact.editContact(200,id);
+        contact.editContact(200, id);
         // get data for edited contact TODO: GET
         JsonPath editedContact = contact.getContact(200, id).jsonPath();
-        LinkedHashMap<String,String> objectEditedData = new LinkedHashMap<>();
+        LinkedHashMap<String, String> objectEditedData = new LinkedHashMap<>();
         objectEditedData.put(editedContact.getString("firstName"), contact.dataForEditContact(id).getFirstName());
         objectEditedData.put(editedContact.getString("lastName"), contact.dataForEditContact(id).getLastName());
         objectEditedData.put(editedContact.getString("description"), contact.dataForEditContact(id).getDescription());
 
-        for (Map.Entry<String, String> object: objectEditedData.entrySet()) {
-            String actualResult =object.getKey();
+        for (Map.Entry<String, String> object : objectEditedData.entrySet()) {
+            String actualResult = object.getKey();
             String expectedResult = object.getValue();
-            Assert.assertEquals(actualResult,expectedResult, actualResult + "not equal" + expectedResult);
+            Assert.assertEquals(actualResult, expectedResult, actualResult + "not equal" + expectedResult);
         }
 
-
         // delete edited contact TODO: DELETE
-        contact.deleteContact(200,id);
+        contact.deleteContact(200, id);
         // get error message (not existing in DB) TODO: GET
         JsonPath actualDeletedContact = contact.getContact(500, id).jsonPath();
-        Assert.assertEquals(actualDeletedContact.getString("message"),"Error! This contact doesn't exist in our DB");
+        Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");
     }
 }

@@ -28,14 +28,13 @@ public class UserCanWorkWithAddressInNewContact {
         String actualJson = actualAddress.toString();
 
         String expectedJson = "{\n" +
-                "        \"id\": "+addressId+",\n" +
+                "        \"id\": " + addressId + ",\n" +
                 "        \"city\": \"Berlin\",\n" +
                 "        \"country\": \"Germany\",\n" +
                 "        \"street\": \"Lenin\",\n" +
                 "        \"zip\": 12345,\n" +
-                "        \"contactId\": "+contactId+"\n" +
+                "        \"contactId\": " + contactId + "\n" +
                 "    }";
         JSONAssert.assertEquals(actualJson, expectedJson, JSONCompareMode.STRICT);
-
     }
 }
