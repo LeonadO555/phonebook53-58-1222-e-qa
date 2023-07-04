@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     Contact contact;
     LoginPage loginPage;
+
+
     ContactPage contactPage;
 
     @Test
