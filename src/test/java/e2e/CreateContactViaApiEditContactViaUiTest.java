@@ -25,5 +25,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactPage = new ContactPage(app.driver);
         contactPage.waitForLoading();
         contactPage.openContactById(String.valueOf(id));
+
+        
     }
 }
