@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Deleted import">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added 2 lines">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -90,10 +90,23 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Elena_Lebedeva" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="eaaaf778-dbf1-4558-a5bf-048d8339650a" />
+        <option name="url" value="https://github.com/LeonadO555/phonebook53-58-1222-e-qa" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -232,7 +245,23 @@
       <option name="project" value="LOCAL" />
       <updated>1687465445983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added 2 lines">
+      <option name="closed" value="true" />
+      <created>1688497082095</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688497082095</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added 2 lines">
+      <option name="closed" value="true" />
+      <created>1688497414406</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688497414406</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +308,8 @@
     <MESSAGE value="added HashMap" />
     <MESSAGE value="Added test" />
     <MESSAGE value="Deleted import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted import" />
+    <MESSAGE value="Added 2 lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 2 lines" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
