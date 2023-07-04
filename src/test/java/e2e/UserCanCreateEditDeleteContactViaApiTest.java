@@ -53,5 +53,7 @@ public class UserCanCreateEditDeleteContactViaApiTest {
         // get error message (not existing in DB) TODO: GET
         JsonPath actualDeletedContact = contact.getContact(500, id).jsonPath();
         Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");
+
+
     }
 }
