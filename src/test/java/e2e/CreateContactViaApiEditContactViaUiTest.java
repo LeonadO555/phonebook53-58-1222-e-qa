@@ -11,7 +11,6 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     LoginPage loginPage;
     ContactPage contactPage;
 
-
     @Test
     public void createContactViaApiEditContactViaUiTest() {
         contact = new Contact();
