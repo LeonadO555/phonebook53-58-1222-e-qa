@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Deleted import">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/enums/Languages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Revert 2 line">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanCreateEditDeleteContactViaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/UserCanCreateEditDeleteContactViaApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +49,44 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Irasp_Andreasian" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Irasp_Andreasian" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -75,9 +103,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Irasp__Andreasian",
     "last_opened_file_path": "/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui",
-    "settings.editor.selected.configurable": "actions.on.save"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -159,6 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686849398577</updated>
+      <workItem from="1688495725432" duration="158000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1686859331973</created>
@@ -195,8 +230,30 @@
       <option name="project" value="LOCAL" />
       <updated>1687465445983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Revert 2 line">
+      <option name="closed" value="true" />
+      <created>1688495322201</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688495322201</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
@@ -204,7 +261,9 @@
     <MESSAGE value="added HashMap" />
     <MESSAGE value="Added test" />
     <MESSAGE value="Deleted import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted import" />
+    <MESSAGE value="Added 2 line" />
+    <MESSAGE value="Revert 2 line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert 2 line" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
