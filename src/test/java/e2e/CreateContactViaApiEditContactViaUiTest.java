@@ -9,8 +9,6 @@ import org.testng.annotations.Test;
 public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     Contact contact;
     LoginPage loginPage;
-
-
     ContactPage contactPage;
 
     @Test
@@ -27,5 +25,6 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactPage = new ContactPage(app.driver);
         contactPage.waitForLoading();
         contactPage.openContactById(String.valueOf(id));
+
     }
 }
