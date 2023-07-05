@@ -1,4 +1,4 @@
-package e2e.pages;
+package e2e;
 
 import api.contact.Contact;
 import api.email.Email;
@@ -9,7 +9,7 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.testng.annotations.Test;
 
-public class UcerCanWorkWithEmailInNewContact {
+public class UserCanWorkWithEmailInNewContact {
     Contact contact;
     Email email;
 
