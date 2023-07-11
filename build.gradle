@@ -19,6 +19,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
     implementation group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '4.2.0'
     testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.7'
 }
 
 test {
