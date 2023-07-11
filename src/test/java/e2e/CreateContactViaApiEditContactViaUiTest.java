@@ -30,6 +30,8 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
         int id = createdContact.getInt("id");
+        logger.debug(String.valueOf(id)); //добавили логгер в дебаге
+
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -46,6 +48,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactInfoPage.waitForEditForm();
         contactInfoPage.setEditForm(editFirstName, editLastName, editDescription);
         boolean visibleStatus = contactInfoPage.saveChanges();
+        logger.info(String.valueOf(visibleStatus)); //можно добавить такой логгер
         Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
 
 //        contactInfoPage.handleSuccessfulToast();
