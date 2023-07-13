@@ -1,5 +1,7 @@
 package e2e.pages;
 
+import enums.ContactTabs;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -80,6 +82,19 @@ public class ContactPhonesPage extends ContactBasePage {
         listEditedData.add(phoneCountryCode.getText());
         listEditedData.add(phoneNumber.getText());
         return listEditedData;
+    }
+
+    public void clickOnPhonesTab(ContactTabs phones) {
+        driver.findElement(By.xpath(phones.value)).click();
+    }
+
+    public WebElement makeCountryCodeCellLocator(String countryCode) {
+        return driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-cc']//*[contains(text(), '" + countryCode + "')]"));
+    }
+
+    public String getTextFromPhoneNumberColumnCell(String phoneNumber) {
+        WebElement element = driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-pn']//*[contains(text(), '" + phoneNumber + "')]"));
+        return element.getText();
     }
 
 }

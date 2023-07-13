@@ -7,11 +7,11 @@ import lombok.Getter;
 @Getter
 public enum CountryCodes {
 
-    GERMANY("Germany (+49)"),
-    FRANCE("France (+33)"),
-    CANADA("Canada (+1)"),
-    UKRAINE("Ukraine (+380)");
+    GERMANY("+49", " Germany (+49) "),
+    FRANCE("+33", " France (+33) "),
+    CANADA("+1", " Canada (+1) "),
+    UKRAINE("+380", " Ukraine (+380) ");
 
-
-    public final String value;
+    public final String code;
+    public final String description;
 }

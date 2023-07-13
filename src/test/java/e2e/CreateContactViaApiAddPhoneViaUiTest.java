@@ -45,16 +45,14 @@ public class CreateContactViaApiAddPhoneViaUiTest extends TestBase{
         contactPhonesPage.clickOnPhonesTab(ContactTabs.PHONES);
         contactPhonesPage.clickOnButton(ContactButtons.ADD_PHONE_NUMBER);
         contactPhonesPage.waitForEditDialog();
-        contactPhonesPage.setAddPhoneDialog(CountryCodes.FRANCE.getValue(), editPhoneNumber);
+        contactPhonesPage.setAddPhoneDialog(CountryCodes.FRANCE.getDescription(), editPhoneNumber);
         boolean visibleStatus = contactPhonesPage.saveChanges();
         Assert.assertFalse(visibleStatus, "Save button is visible");
 
-//        contactInfoPage.handleSuccessfulToast();
-//        contactPhonesPage.waitForLoading();
-//        List<String> actualEditedPhone = contactPhonesPage.getEditForm();
-//        List<String> expectedEditedPhone = new ArrayList<>();
-//        expectedEditedPhone.add(CountryCodes.FRANCE.getValue());
-//        expectedEditedPhone.add(editPhoneNumber);
-//        Assert.assertEquals(actualEditedPhone, expectedEditedPhone);
+        contactPhonesPage.waitForLoading();
+        Assert.assertEquals(contactPhonesPage.makeCountryCodeCellLocator(CountryCodes.FRANCE.getCode()).getText(), CountryCodes.FRANCE.getCode(), "Country codes are not equal");
+
+        String actualPhoneNumber = contactPhonesPage.getTextFromPhoneNumberColumnCell(editPhoneNumber);
+        Assert.assertEquals(actualPhoneNumber, editPhoneNumber, "Actual phone number does not match  expected");
     }
 }

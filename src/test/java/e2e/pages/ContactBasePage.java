@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ContactBasePage extends PageBase{
+public class ContactBasePage extends PageBase {
 
     public ContactBasePage(WebDriver driver) {
         super(driver);
@@ -20,15 +20,17 @@ public class ContactBasePage extends PageBase{
     WebElement dialog;
 
 
-    public void openTab(ContactTabs tab){
+    public void openTab(ContactTabs tab) {
         driver.findElement(By.xpath(tab.value)).click();
     }
 
-    public void filterBy(String value){
+    public void filterBy(String value) {
         inlineFilter.sendKeys(value);
     }
 
     public void clickOnButton(ContactButtons button) {
         driver.findElement(By.xpath(button.value)).click();
     }
+
+
 }
