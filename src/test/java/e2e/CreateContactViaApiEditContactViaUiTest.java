@@ -29,6 +29,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
         int id = createdContact.getInt("id");
+        logger.debug(String.valueOf(id));
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -39,16 +40,16 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactPage.waitForLoading();
         contactPage.openContactById(String.valueOf(id));
 
-
         contactInfoPage = new ContactInfoPage(app.driver);
         contactInfoPage.waitForLoading();
         contactInfoPage.clickOnButton(ContactButtons.EDIT);
         contactInfoPage.waitForEditForm();
-        contactInfoPage.setlEditForm(editFirstName, editLastName, editDescription);
-        contactInfoPage.saveChanges();
-        contactInfoPage.handleSuccessfulToast();
+        contactInfoPage.setEditForm(editFirstName, editLastName, editDescription);
+
+        //contactInfoPage.handleSuccessfulToast();
         boolean visibleStatus = contactInfoPage.saveChanges();
         Assert.assertFalse(visibleStatus, "Save button is visible");
+        contactInfoPage.waitForLoading();
         List<String> actualEditedContact = contactInfoPage.getEditForm();
         List<String> expectedEditedContact = new ArrayList<>();
         expectedEditedContact.add(editFirstName);
