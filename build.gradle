@@ -22,5 +22,11 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
+}
+
+task testUser(type: Test) {
+    useTestNG() {
+        suites 'src/test/resourses'
+    }
 }
