@@ -11,7 +11,6 @@ import java.util.Arrays;
 
 public class TestBase {
     protected static ApplicationManager app = new ApplicationManager();
-
     protected static Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeMethod
@@ -22,7 +21,6 @@ public class TestBase {
     @BeforeMethod
     public void startTest(Method m, Object[] p) {
         logger.info("Start test " + m.getName() + " with data: " + Arrays.asList(p));
-
     }
 
     @AfterMethod
@@ -35,8 +33,8 @@ public class TestBase {
         if (result.isSuccess()) {
             logger.info("PASSED =) " + result.getMethod().getMethodName());
         } else {
-            logger.info("FAILED = ( " + result.getMethod().getMethodName());
+            logger.info("FAILED =( " + result.getMethod().getMethodName());
         }
-        logger.info("===========================================");
+        logger.info("=========================================================================");
     }
 }

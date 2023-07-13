@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added comment">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="removed 1 line">
       <change afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,14 +75,14 @@
           <entry type="LOCAL">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="Elena_Lebedeva" />
+                <branch-info repo="$PROJECT_DIR$" source="Leonid_Mikhailov" />
               </list>
             </value>
           </entry>
           <entry type="REMOTE">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/Elena_Lebedeva" />
+                <branch-info repo="$PROJECT_DIR$" source="origin/Leonid_Mikhailov" />
               </list>
             </value>
           </entry>
@@ -93,7 +91,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Elena_Lebedeva" />
+        <entry key="$PROJECT_DIR$" value="Leonid_Mikhailov" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,7 +104,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="eaaaf778-dbf1-4558-a5bf-048d8339650a" />
+        <option name="accountId" value="1faeacc8-6b67-4318-a68c-6fefc9110fd2" />
         <option name="url" value="https://github.com/LeonadO555/phonebook53-58-1222-e-qa" />
       </UrlAndAccount>
     </option>
@@ -125,9 +123,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Leonid__Mikhailov&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
@@ -141,8 +139,8 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.phonebook53-58-1222-e-qa [dependencies]">
-    <configuration name="phonebook53-58-1222-e-qa [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest">
+    <configuration name="phoneBook53-58-1222-e-qa [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -153,7 +151,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -220,10 +218,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.phonebook53-58-1222-e-qa [dependencies]" />
+        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
+        <item itemvalue="Gradle.phoneBook53-58-1222-e-qa [test]" />
         <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
         <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
-        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
@@ -273,73 +271,42 @@
       <updated>1687465445983</updated>
     </task>
     <task id="LOCAL-00006" summary="Added 2 lines">
-      <option name="closed" value="true" />
-      <created>1688497082095</created>
+      <created>1688496960846</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1688497082095</updated>
+      <updated>1688496960846</updated>
     </task>
-    <task id="LOCAL-00007" summary="Added 2 lines">
-      <option name="closed" value="true" />
-      <created>1688497414406</created>
+    <task id="LOCAL-00007" summary="222">
+      <created>1688499878232</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1688497414406</updated>
+      <updated>1688499878233</updated>
     </task>
-    <task id="LOCAL-00008" summary="Added logback">
-      <option name="closed" value="true" />
-      <created>1689105003566</created>
+    <task id="LOCAL-00008" summary="4444">
+      <created>1688499911566</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1689105003566</updated>
+      <updated>1688499911566</updated>
     </task>
-    <task id="LOCAL-00009" summary="Added comment">
-      <option name="closed" value="true" />
-      <created>1689261352646</created>
+    <task id="LOCAL-00009" summary="removed 1 line">
+      <created>1688500355420</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1689261352646</updated>
+      <updated>1688500355420</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/master" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -352,9 +319,10 @@
     <MESSAGE value="Added test" />
     <MESSAGE value="Deleted import" />
     <MESSAGE value="Added 2 lines" />
-    <MESSAGE value="Added logback" />
-    <MESSAGE value="Added comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comment" />
+    <MESSAGE value="222" />
+    <MESSAGE value="4444" />
+    <MESSAGE value="removed 1 line" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed 1 line" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
