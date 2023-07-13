@@ -9,6 +9,7 @@ public class LoginPage extends PageBase {
         super(driver);
     }
 
+
     @FindBy(xpath = "//*[@id='login-form']")
     WebElement loginForm;
 
@@ -27,6 +28,7 @@ public class LoginPage extends PageBase {
     @FindBy(xpath = "//*[@routerlink='/user/forgot-password']")
     WebElement forgotPasswordLink;
 
+
     public void waitForLoading() {
         getWait().forVisibility(loginForm);
         getWait().forVisibility(emailInput);
@@ -42,6 +44,10 @@ public class LoginPage extends PageBase {
 
     public void confirmSuccessfulLogin() {
         getWait().forInvisibility(loginForm);
+    }
+
+    public void confirmNotEntry() {
+        getWait().forVisibility();
     }
 
     public void clickOnRegistrationLink() {
