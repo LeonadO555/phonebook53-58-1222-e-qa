@@ -56,7 +56,7 @@ public class ContactInfoPage extends ContactBasePage {
     }
 
 
-    public void setlEditForm(String firstName, String lastName, String description) {
+    public void setEditForm(String firstName, String lastName, String description) {
         firsNameInput.click();
         firsNameInput.clear();
         firsNameInput.sendKeys(firstName);
