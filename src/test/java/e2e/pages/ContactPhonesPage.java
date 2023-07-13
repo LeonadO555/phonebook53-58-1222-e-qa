@@ -96,5 +96,4 @@ public class ContactPhonesPage extends ContactBasePage {
         WebElement element = driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-pn']//*[contains(text(), '" + phoneNumber + "')]"));
         return element.getText();
     }
-
 }
