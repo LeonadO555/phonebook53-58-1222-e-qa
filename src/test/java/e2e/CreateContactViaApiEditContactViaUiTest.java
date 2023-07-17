@@ -33,8 +33,9 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login();
+        loginPage.login("test@gmail.com", "test@gmail.com");
         loginPage.confirmSuccessfulLogin();
+//        loginPage.confirmUnsuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
         contactPage.waitForLoading();
