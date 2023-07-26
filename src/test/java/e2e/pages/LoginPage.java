@@ -45,11 +45,6 @@ public class LoginPage extends PageBase {
         getWait().forInvisibility(loginForm);
     }
 
-//    public void confirmUnsuccessfulLogin() {
-//
-//        getWait().forVisibility(loginForm);
-//    }
-
     public void clickOnRegistrationLink() {
 
         click(registerNewAccountLink);
