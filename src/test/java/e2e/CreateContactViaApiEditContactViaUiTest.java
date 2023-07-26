@@ -55,5 +55,6 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         expectedEditedContact.add(editLastName);
         expectedEditedContact.add(editDescription);
         Assert.assertEquals(actualEditedContact, expectedEditedContact);
+
     }
 }
