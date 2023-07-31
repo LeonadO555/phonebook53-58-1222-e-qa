@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="removed 1 line">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Described 2 confing for run tests (testng)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ContactButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/ContactButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ContactTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/ContactTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/Languages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/schemas/AddressDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schemas/AddressDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/schemas/ContactDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schemas/ContactDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/schemas/EmailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schemas/EmailDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -91,7 +100,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Leonid_Mikhailov" />
+        <entry key="$PROJECT_DIR$" value="Irasp_Andreasian" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,7 +137,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -139,7 +148,7 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest">
+  <component name="RunManager" selected="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest">
     <configuration name="phoneBook53-58-1222-e-qa [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -218,10 +227,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
         <item itemvalue="Gradle.phoneBook53-58-1222-e-qa [test]" />
         <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
-        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
@@ -298,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688500355420</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Described 2 confing for run tests (testng)">
+      <created>1689275646019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689275646019</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,7 +338,8 @@
     <MESSAGE value="222" />
     <MESSAGE value="4444" />
     <MESSAGE value="removed 1 line" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed 1 line" />
+    <MESSAGE value="Described 2 confing for run tests (testng)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Described 2 confing for run tests (testng)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

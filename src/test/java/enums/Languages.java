@@ -1,9 +1,7 @@
 package enums;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
 public enum Languages {
     ENGLISH("English"),
@@ -12,4 +10,8 @@ public enum Languages {
     UKRAINE("Ukraine");
 
     public final String value;
+
+    Languages(String value) {
+        this.value = value;
+    }
 }
