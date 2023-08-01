@@ -1,5 +1,6 @@
 package e2e.pages;
 
+import enums.UserCredentials;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,15 +35,19 @@ public class LoginPage extends PageBase {
         getWait().forClickable(loginButton);
     }
 
-    public void login(String email, String password) {
-        emailInput.sendKeys(email);
-        passwordInput.sendKeys(password);
+    public void login(UserCredentials email, UserCredentials password) {
+        emailInput.sendKeys(email.value);
+        passwordInput.sendKeys(password.value);
         click(loginButton);
     }
 
 
     public void confirmSuccessfulLogin() {
         getWait().forInvisibility(loginForm);
+    }
+
+    public void confirmUnsuccessfulLogin() {
+        getWait().forVisibility(loginForm);
     }
 
     public void clickOnRegistrationLink() {

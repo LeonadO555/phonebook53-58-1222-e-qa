@@ -3,6 +3,7 @@ package e2e;
 import api.contact.Contact;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
+import enums.UserCredentials;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
@@ -19,12 +20,13 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
+        loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
         loginPage.login();
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
         contactPage.waitForLoading();
         contactPage.openContactById(String.valueOf(id));
-        
+
     }
 }
