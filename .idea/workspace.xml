@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Fixed conflict">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/email/Email.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/UserCanWorkWithEmailInNewContact.java" afterDir="false" />
-    </list>
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Rolled back Email and UserCanWorkWithEmailInNewContact" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,19 +117,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Leonid__Mikhailov&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Leonid__Mikhailov",
+    "last_opened_file_path": "/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java/ui" />
@@ -332,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690809420689</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Rolled back Email and UserCanWorkWithEmailInNewContact">
+      <option name="closed" value="true" />
+      <created>1690914445669</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690914445669</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,7 +364,8 @@
     <MESSAGE value="removed 1 line" />
     <MESSAGE value="Described 2 confing for run tests (testng)" />
     <MESSAGE value="Fixed conflict" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
+    <MESSAGE value="Rolled back Email and UserCanWorkWithEmailInNewContact" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rolled back Email and UserCanWorkWithEmailInNewContact" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
