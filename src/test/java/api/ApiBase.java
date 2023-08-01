@@ -12,10 +12,10 @@ public class ApiBase {
     RequestSpecification spec = new RequestSpecBuilder()
             .setBaseUri(BASE_URI)
             .setContentType(ContentType.JSON)
-            .addHeader("Access-Token",API_KEY)
+            .addHeader("Access-Token", API_KEY)
             .build();
 
-    public Response getRequest(String endPoint, Integer responseCode){
+    public Response getRequest(String endPoint, Integer responseCode) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
@@ -27,7 +27,7 @@ public class ApiBase {
         return response;
     }
 
-    public Response getRequestWithParam(String endPoint, Integer responseCode,String paramName, int id){
+    public Response getRequestWithParam(String endPoint, Integer responseCode, String paramName, int id) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
@@ -40,7 +40,7 @@ public class ApiBase {
         return response;
     }
 
-    public Response postRequest(String endPoint, Integer responseCode, Object body){
+    public Response postRequest(String endPoint, Integer responseCode, Object body) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -53,7 +53,7 @@ public class ApiBase {
         return response;
     }
 
-    public Response putRequest(String endPoint, Integer responseCode, Object body){
+    public Response putRequest(String endPoint, Integer responseCode, Object body) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -66,7 +66,7 @@ public class ApiBase {
         return response;
     }
 
-    public Response deleteRequest(String endPoint, Integer responseCode, int id){
+    public Response deleteRequest(String endPoint, Integer responseCode, int id) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
@@ -77,5 +77,7 @@ public class ApiBase {
                 .extract().response();
         response.then().assertThat().statusCode(responseCode);
         return response;
+
+
     }
 }
