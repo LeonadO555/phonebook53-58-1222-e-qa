@@ -36,5 +36,7 @@ public class TestBase {
             logger.info("FAILED =( " + result.getMethod().getMethodName());
         }
         logger.info("=========================================================================");
+
+
     }
 }
