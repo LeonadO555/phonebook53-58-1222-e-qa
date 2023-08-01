@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Described 2 confing for run tests (testng)">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Fixed conflict">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ContactButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/ContactButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ContactTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/ContactTabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/Languages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/Languages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/schemas/AddressDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schemas/AddressDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/schemas/ContactDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schemas/ContactDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/schemas/EmailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schemas/EmailDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689275646019</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed conflict">
+      <created>1690809420688</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690809420689</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +338,8 @@
     <MESSAGE value="4444" />
     <MESSAGE value="removed 1 line" />
     <MESSAGE value="Described 2 confing for run tests (testng)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Described 2 confing for run tests (testng)" />
+    <MESSAGE value="Fixed conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
