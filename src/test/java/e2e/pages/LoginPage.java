@@ -34,11 +34,12 @@ public class LoginPage extends PageBase {
         getWait().forClickable(loginButton);
     }
 
-    public void login() {
-        emailInput.sendKeys("test@gmail.com");
-        passwordInput.sendKeys("test@gmail.com");
+    public void login(String email, String password) {
+        emailInput.sendKeys(email);
+        passwordInput.sendKeys(password);
         click(loginButton);
     }
+
 
     public void confirmSuccessfulLogin() {
         getWait().forInvisibility(loginForm);
@@ -51,4 +52,6 @@ public class LoginPage extends PageBase {
     public void clickOnForgotPasswordLink() {
         click(forgotPasswordLink);
     }
+
+
 }

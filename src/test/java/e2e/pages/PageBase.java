@@ -28,4 +28,9 @@ public class PageBase {
         Select select = new Select(element);
         select.selectByVisibleText(text);
     }
+
+
+    public void login() {
+
+    }
 }
