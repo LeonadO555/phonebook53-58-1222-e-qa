@@ -5,6 +5,7 @@ import com.github.javafaker.Faker;
 import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
+import enums.ContactButtons;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -41,7 +42,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
 
         contactInfoPage = new ContactInfoPage(app.driver);
         contactInfoPage.waitForLoading();
-//        contactInfoPage.clickOnButton(ContactButtons.EDIT);
+        contactInfoPage.clickOnButton(ContactButtons.EDIT);
         contactInfoPage.waitForEditForm();
         contactInfoPage.setEditForm(editFirstName, editLastName, editDescription);
         boolean visibleStatus = contactInfoPage.saveChanges();
