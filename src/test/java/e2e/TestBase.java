@@ -31,11 +31,10 @@ public class TestBase {
     @AfterMethod
     public void stopTest(ITestResult result) {
         if (result.isSuccess()) {
-            logger.info("PASSED =)" + result.getMethod().getMethodName());
+            logger.info("PASSED =) " + result.getMethod().getMethodName());
         } else {
-            logger.info("FAILED = (" + result.getMethod().getMethodName());
+            logger.info("FAILED =( " + result.getMethod().getMethodName());
         }
-        logger.info("=========================================");
-
+        logger.info("=========================================================================");
     }
 }

@@ -29,5 +29,4 @@ public class ContactBasePage extends PageBase {
     public void clickOnButton(ContactButtons button) {
         driver.findElement(By.xpath(button.value)).click();
     }
-
 }

@@ -1,10 +1,10 @@
 package e2e.pages;
 
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +21,9 @@ public class ContactInfoPage extends ContactBasePage {
     WebElement lastNameInput;
 
     @FindBy(xpath = "//*[@name='input-ec-description']")
-    WebElement descriptionTextares;
+    WebElement descriptionTextarea;
 
-    @FindBy(xpath = "//*[@class='btn btn-primary submit-btn-ec']")
+    @FindBy(xpath = "//*[@class='col-sm-3']//*[@type='submit']")
     WebElement saveButton;
 
     @FindBy(xpath = "//*[@class='toast-body']")
@@ -43,6 +43,7 @@ public class ContactInfoPage extends ContactBasePage {
 
     public void waitForLoading() {
         getWait().forVisibility(editButton);
+        getWait().forClickable(editButton);
         getWait().forVisibility(contactFirstName);
         getWait().forVisibility(contactLastName);
         getWait().forVisibility(contactDescription);
@@ -51,19 +52,19 @@ public class ContactInfoPage extends ContactBasePage {
     public void waitForEditForm() {
         getWait().forVisibility(firstNameInput);
         getWait().forVisibility(lastNameInput);
-        getWait().forVisibility(descriptionTextares);
+        getWait().forVisibility(descriptionTextarea);
     }
 
-    public void fillEditForm(String firstName, String lastName, String description) {
+    public void setEditForm(String firstName, String lastName, String description) {
         firstNameInput.click();
         firstNameInput.clear();
         firstNameInput.sendKeys(firstName);
         lastNameInput.click();
         lastNameInput.clear();
         lastNameInput.sendKeys(lastName);
-        descriptionTextares.click();
-        descriptionTextares.clear();
-        descriptionTextares.sendKeys(description);
+        descriptionTextarea.click();
+        descriptionTextarea.clear();
+        descriptionTextarea.sendKeys(description);
     }
 
     public boolean saveChanges() {
@@ -77,17 +78,17 @@ public class ContactInfoPage extends ContactBasePage {
         }
     }
 
-//    public void handlesSuccessfulToast() {
-//        Assert.assertFalse(toast.isDisplayed(), "Toast is not visible");
-//        String toastText = toast.getText();
-//        Assert.assertEquals(toastText, "Contact changed");
-//    }
+    public void handleSuccessfulToast() {
+        Assert.assertTrue(toast.isDisplayed(), "Toast is not visible");
+        String toastText = toast.getText();
+        Assert.assertEquals(toastText, "Contact changed");
+    }
 
     public List<String> getEditForm() {
-        List<String> listEditData = new ArrayList<>();
-        listEditData.add(contactFirstName.getText());
-        listEditData.add(contactLastName.getText());
-        listEditData.add(contactDescription.getText());
-        return listEditData;
+        List<String> listEditedData = new ArrayList<>();
+        listEditedData.add(contactFirstName.getText());
+        listEditedData.add(contactLastName.getText());
+        listEditedData.add(contactDescription.getText());
+        return listEditedData;
     }
 }
