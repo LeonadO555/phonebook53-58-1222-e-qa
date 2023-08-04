@@ -46,7 +46,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactInfoPage.waitForEditForm();
         contactInfoPage.setEditForm(editFirstName, editLastName, editDescription);
         boolean visibleStatus = contactInfoPage.saveChanges();
-        Assert.assertFalse(visibleStatus, "Save button is visible");
+        Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
         contactInfoPage.waitForLoading();
         List<String> actualEditedContact = contactInfoPage.getEditForm();
         List<String> expectedEditedContact = new ArrayList<>();

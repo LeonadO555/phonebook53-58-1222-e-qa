@@ -13,6 +13,8 @@ public class TestBase {
     protected static ApplicationManager app = new ApplicationManager();
     protected static Logger logger = LoggerFactory.getLogger(TestBase.class);
 
+    protected static Logger logger = LoggerFactory.getLogger(TestBase.class);
+
     @BeforeMethod
     public void setupTest() {
         app.init();
@@ -20,7 +22,7 @@ public class TestBase {
 
     @BeforeMethod
     public void startTest(Method m, Object[] p) {
-        logger.info("Start test " + m.getName() + " with data: " + Arrays.asList(p));
+        logger.info("Start test " + m.getName() + " with data: " + Arrays.asList(p)); //будет собирать методы и данные
     }
 
     @AfterMethod
