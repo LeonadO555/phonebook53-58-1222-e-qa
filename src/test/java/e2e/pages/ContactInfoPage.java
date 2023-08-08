@@ -73,25 +73,13 @@ public class ContactInfoPage extends ContactBasePage {
             saveButton.isDisplayed();
             return true;
         } catch (NoSuchElementException e) {
-=======
-        descriptionTextArea.click();
-        descriptionTextArea.clear();
-        descriptionTextArea.sendKeys(description);
-    }
-
-    public boolean saveChanges() {
-        saveButton.click();
-        try {
-            saveButton.isDisplayed();
-            return true;
-        } catch (NoSuchElementException e) {
             e.printStackTrace();
             return false;
         }
     }
 
     public void handleSuccessfulToast() {
-        Assert.assertTrue(toast.isDisplayed(), "Toast is not visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
+        Assert.assertTrue(toast.isDisplayed(), "Toast is not visible");
         String toastText = toast.getText();
         Assert.assertEquals(toastText, "Contact changed");
     }

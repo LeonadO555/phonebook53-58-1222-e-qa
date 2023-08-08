@@ -13,8 +13,6 @@ public class TestBase {
     protected static ApplicationManager app = new ApplicationManager();
     protected static Logger logger = LoggerFactory.getLogger(TestBase.class);
 
-    protected static Logger logger = LoggerFactory.getLogger(TestBase.class);
-
     @BeforeMethod
     public void setupTest() {
         app.init();
