@@ -8,14 +8,12 @@ import e2e.pages.LoginPage;
 import enums.ContactButtons;
 import enums.ContactTabs;
 import enums.CountryCodes;
+import enums.UserCredentials;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class CreateContactViaApiAddPhoneViaUiTest extends TestBase{
+public class CreateContactViaApiAddPhoneViaUiTest extends TestBase {
 
     Contact contact;
     LoginPage loginPage;
@@ -33,7 +31,7 @@ public class CreateContactViaApiAddPhoneViaUiTest extends TestBase{
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login();
+        loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
