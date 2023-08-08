@@ -9,21 +9,21 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactInfoPage extends ContactBasePage{
-
+public class ContactInfoPage extends ContactBasePage {
     public ContactInfoPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy (xpath = "//*[@name='input-ec-firstName']")
+
+    @FindBy(xpath = "//*[@name='input-ec-firstName']")
     WebElement firstNameInput;
 
-    @FindBy (xpath = "//*[@name='input-ec-lastName']")
+    @FindBy(xpath = "//*[@name='input-ec-lastName']")
     WebElement lastNameInput;
 
-    @FindBy (xpath = "//*[@name='input-ec-description']")
-    WebElement descriptionTextArea;
+    @FindBy(xpath = "//*[@name='input-ec-description']")
+    WebElement descriptionTextarea;
 
-    @FindBy (xpath = "//*[@class ='col-sm-3']//*[@type='submit']")
+    @FindBy(xpath = "//*[@class='col-sm-3']//*[@type='submit']")
     WebElement saveButton;
 
     @FindBy(xpath = "//*[@class='toast-body']")
@@ -49,43 +49,42 @@ public class ContactInfoPage extends ContactBasePage{
         getWait().forVisibility(contactDescription);
     }
 
-    public void waitForEditForm(){
+    public void waitForEditForm() {
         getWait().forVisibility(firstNameInput);
         getWait().forVisibility(lastNameInput);
-        getWait().forVisibility(descriptionTextArea);
+        getWait().forVisibility(descriptionTextarea);
     }
 
-
-    public void setEditForm(String firstName, String lastName, String description){
+    public void setEditForm(String firstName, String lastName, String description) {
         firstNameInput.click();
         firstNameInput.clear();
         firstNameInput.sendKeys(firstName);
         lastNameInput.click();
         lastNameInput.clear();
         lastNameInput.sendKeys(lastName);
-        descriptionTextArea.click();
-        descriptionTextArea.clear();
-        descriptionTextArea.sendKeys(description);
+        descriptionTextarea.click();
+        descriptionTextarea.clear();
+        descriptionTextarea.sendKeys(description);
     }
 
-    public boolean saveChanges(){
+    public boolean saveChanges() {
         saveButton.click();
-        try{
+        try {
             saveButton.isDisplayed();
             return true;
-        }catch (NoSuchElementException e) {
+        } catch (NoSuchElementException e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public void handleSuccessfulToast(){
-        Assert.assertTrue(toast.isDisplayed(), "Toast is not visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
+    public void handleSuccessfulToast() {
+        Assert.assertTrue(toast.isDisplayed(), "Toast is not visible");
         String toastText = toast.getText();
         Assert.assertEquals(toastText, "Contact changed");
     }
 
-    public List<String> getEditForm(){
+    public List<String> getEditForm() {
         List<String> listEditedData = new ArrayList<>();
         listEditedData.add(contactFirstName.getText());
         listEditedData.add(contactLastName.getText());

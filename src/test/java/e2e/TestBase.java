@@ -11,7 +11,6 @@ import java.util.Arrays;
 
 public class TestBase {
     protected static ApplicationManager app = new ApplicationManager();
-
     protected static Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeMethod
@@ -36,6 +35,6 @@ public class TestBase {
         } else {
             logger.info("FAILED =( " + result.getMethod().getMethodName());
         }
-        logger.info("=========================================================");
+        logger.info("=========================================================================");
     }
 }
