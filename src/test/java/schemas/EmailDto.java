@@ -1,19 +1,22 @@
 package schemas;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-
 public class EmailDto {
-    int id;
-    String email;
-    int contactId;
+    @JsonProperty("id")
+    private int id;
+
+    @JsonProperty("email")
+    private String email;
+
+    @JsonProperty("contactId")
+    private int contactId;
 }

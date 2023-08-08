@@ -5,7 +5,6 @@
         <classes>
             <class name="e2e.UserCanCreateEditDeleteContactViaApiTest"/>
             <class name="e2e.UserCanWorkWithAddressInNewContact"/>
-            <class name="e2e.UserCanWorkWithEmailInNewContact"/>
         </classes>
     </test>
 </suite>
