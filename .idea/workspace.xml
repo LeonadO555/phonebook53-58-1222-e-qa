@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="change">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Fixed conflict">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/UserCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiAddPhoneViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiAddPhoneViaUiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +30,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="phoneBook53-58-1222-e-qa" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -36,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -45,33 +55,72 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Leonid_Mikhailov" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Leonid_Mikhailov" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Michael_Gadatzki" />
+        <entry key="$PROJECT_DIR$" value="Galina_Voronkova" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Michasik77&quot;
+    &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="80d030ee-140d-459e-8da2-ed2e4a88538b" />
+        <option name="accountId" value="1faeacc8-6b67-4318-a68c-6fefc9110fd2" />
         <option name="url" value="https://github.com/LeonadO555/phonebook53-58-1222-e-qa" />
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
   <component name="ProjectId" id="2RFcinJtjugmbocJrfRXxJZr6A6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -82,13 +131,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Galina__Voronkova__compare__screenshot",
+    "git-widget-placeholder": "Leonid__Mikhailov",
     "last_opened_file_path": "/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -99,96 +147,129 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/HP/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngSmoke.xml">
-    <configuration name="C:/Users/HP/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.LoginTest.userCanNotLoginWithInvalidData">
+    <configuration name="CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
-      <option name="METHOD_NAME" value="createContactViaApiEditContactViaUiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="LoginTest.userCanLoginWithValidData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.LoginTest.userCanLoginWithValidData&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="LoginTest.userCanNotLoginWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.LoginTest" />
-      <option name="METHOD_NAME" value="userCanNotLoginWithInvalidPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="LoginTest.userCanNotLoginWithInvalidData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.LoginTest.userCanNotLoginWithInvalidData&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanCreateEditDeleteContactViaApiTest" />
-      <option name="METHOD_NAME" value="userCanCreateEditDeleteContactViaApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="LoginTest.userCanNotLoginWithInvalidEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.LoginTest.userCanNotLoginWithInvalidEmail&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithAddressInNewContact" />
-      <option name="METHOD_NAME" value="userCanWorkWithAddressInNewContact" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="LoginTest.userCanNotLoginWithInvalidPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.LoginTest.userCanNotLoginWithInvalidPassword&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
-        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
-        <item itemvalue="TestNG.LoginTest.userCanNotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
-        <item itemvalue="TestNG.C:/Users/HP/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" />
+        <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidData" />
+        <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidPassword" />
+        <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidEmail" />
+        <item itemvalue="Gradle.LoginTest.userCanLoginWithValidData" />
+        <item itemvalue="Gradle.CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -236,15 +317,49 @@
       <option name="project" value="LOCAL" />
       <updated>1687465445983</updated>
     </task>
-    <task id="LOCAL-00006" summary="change">
-      <option name="closed" value="true" />
-      <created>1691083862808</created>
+    <task id="LOCAL-00006" summary="Added 2 lines">
+      <created>1688496960846</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1691083862808</updated>
+      <updated>1688496960846</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="222">
+      <created>1688499878232</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688499878233</updated>
+    </task>
+    <task id="LOCAL-00008" summary="4444">
+      <created>1688499911566</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688499911566</updated>
+    </task>
+    <task id="LOCAL-00009" summary="removed 1 line">
+      <created>1688500355420</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688500355420</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Described 2 confing for run tests (testng)">
+      <created>1689275646019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689275646019</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed conflict">
+      <created>1690809420688</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690809420689</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,24 +367,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Michael_Gadatzki_compare_screenshot" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -281,8 +379,13 @@
     <MESSAGE value="added HashMap" />
     <MESSAGE value="Added test" />
     <MESSAGE value="Deleted import" />
-    <MESSAGE value="change" />
-    <option name="LAST_COMMIT_MESSAGE" value="change" />
+    <MESSAGE value="Added 2 lines" />
+    <MESSAGE value="222" />
+    <MESSAGE value="4444" />
+    <MESSAGE value="removed 1 line" />
+    <MESSAGE value="Described 2 confing for run tests (testng)" />
+    <MESSAGE value="Fixed conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
