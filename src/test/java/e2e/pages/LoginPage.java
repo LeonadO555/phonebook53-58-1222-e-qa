@@ -64,4 +64,3 @@ public class LoginPage extends PageBase {
         takeAndCompareScreenShot("loginButton", loginButton);
     }
 }
-
