@@ -6,6 +6,7 @@ import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
+import enums.UserCredentials;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -21,7 +22,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     ContactInfoPage contactInfoPage;
     Faker faker = new Faker();
 
-    @Test(description = "New test")
+    @Test(description = "User can edit contact which was created")
     public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
@@ -36,7 +37,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         loginPage.waitForLoading();
         loginPage.takeScreenshotLoginButton();
         loginPage.takeAndCompareScreenshot("loginPage", null);
-        loginPage.login();
+        loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
