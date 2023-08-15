@@ -61,6 +61,6 @@ public class LoginPage extends PageBase {
     }
 
     public void takeScreenshotLoginButton() throws IOException {
-        takeAndCompareScreenShot("loginButton", loginButton);
+        takeAndCompareScreenshot("loginButton", loginButton);
     }
 }
