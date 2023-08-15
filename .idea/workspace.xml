@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Fixed conflict">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +80,7 @@
             <value>
               <list>
                 <branch-info repo="$PROJECT_DIR$" source="Leonid_Mikhailov" />
+                <branch-info repo="$PROJECT_DIR$" source="Elena_Miliutina" />
               </list>
             </value>
           </entry>
@@ -92,7 +96,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Irasp_Andreasian" />
+        <entry key="$PROJECT_DIR$" value="Elena_Miliutina" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,7 +144,7 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest">
+  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest">
     <configuration name="phoneBook53-58-1222-e-qa [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -162,6 +166,23 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
+    </configuration>
+    <configuration name="CreateContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
@@ -219,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
+        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
-        <item itemvalue="Gradle.phoneBook53-58-1222-e-qa [test]" />
         <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
-        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
+        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
+        <item itemvalue="Gradle.phoneBook53-58-1222-e-qa [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -340,6 +361,27 @@
     <MESSAGE value="Described 2 confing for run tests (testng)" />
     <MESSAGE value="Fixed conflict" />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/api/address/Address.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/api/address/Address.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/api/address/Address.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

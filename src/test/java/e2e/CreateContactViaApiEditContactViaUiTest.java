@@ -10,6 +10,7 @@ import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     Faker faker = new Faker();
 
     @Test
-    public void createContactViaApiEditContactViaUiTest() {
+    public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
         String editDescription = faker.internet().uuid();
@@ -34,6 +35,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login();
+        loginPage.takeAndCompareScreenshot("loginPageScreenshot", null);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);

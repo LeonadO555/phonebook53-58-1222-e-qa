@@ -51,4 +51,5 @@ public class LoginPage extends PageBase {
     public void clickOnForgotPasswordLink() {
         click(forgotPasswordLink);
     }
+
 }
