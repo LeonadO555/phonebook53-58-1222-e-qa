@@ -1,0 +1,311 @@
+Index: src/test/java/api/email/Email.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/api/email/Email.java b/src/test/java/api/email/Email.java
+new file mode 100644
+--- /dev/null	(date 1691910785639)
++++ b/src/test/java/api/email/Email.java	(date 1691910785639)
+@@ -0,0 +1,63 @@
++package api.email;
++
++import api.ApiBase;
++import com.github.javafaker.Faker;
++import io.restassured.response.Response;
++import schemas.EmailDto;
++
++
++public class Email extends ApiBase {
++
++    Response response;
++
++    EmailDto dto;
++
++    Faker faker = new Faker();
++
++    String newEmail = faker.internet().emailAddress();
++
++    public EmailDto dataForCreateEmail(int contactId) {
++        dto = new EmailDto();
++        dto.setEmail(newEmail);
++        dto.setContactId(contactId);
++        return dto;
++    }
++
++    public EmailDto dataForEditEmail(int id, int contactId) {
++        dto = new EmailDto();
++        dto.setId(id);
++        dto.setEmail(newEmail);
++        dto.setContactId(contactId);
++        return dto;
++    }
++
++    public Response createEmail(Integer code, int id) {
++        String endpoint = "/api/email";
++        response = postRequest(endpoint, code, dataForCreateEmail(id));
++        return response;
++    }
++
++    public void editEmail(Integer code, int id, int contactId) {
++        String endPoint = "/api/email";
++        putRequest(endPoint, code, dataForEditEmail(id, contactId));
++    }
++
++    public Response deleteEmail(Integer code, int id) {
++        String endPoint = "/api/email/{id}";
++        response = deleteRequest(endPoint, code, id);
++        return response;
++    }
++
++    public Response getEmail(Integer code, Integer id) {
++        String endPoint = "/api/email/{id}";
++        response = getRequestWithParam(endPoint, code, "id", id);
++        return response;
++    }
++
++    public Response getEmails(Integer code, Integer id) {
++        String endPoint = "/api/email/{contactId}/all";
++        response = getRequestWithParam(endPoint, code, "contactId", id);
++        return response;
++    }
++
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 866b23837e603f4e9d05dfcb0d89e3ef64eea293)
++++ b/.idea/misc.xml	(date 1691906657015)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/test/java/e2e/EmailSortingTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/EmailSortingTest.java b/src/test/java/e2e/EmailSortingTest.java
+new file mode 100644
+--- /dev/null	(date 1692119729406)
++++ b/src/test/java/e2e/EmailSortingTest.java	(date 1692119729406)
+@@ -0,0 +1,57 @@
++//package e2e;
++//
++//import org.openqa.selenium.By;
++//import org.openqa.selenium.WebDriver;
++//import org.openqa.selenium.WebElement;
++//import org.openqa.selenium.chrome.ChromeDriver;
++//import org.openqa.selenium.chrome.ChromeOptions;
++//import org.openqa.selenium.support.ui.ExpectedConditions;
++//import org.openqa.selenium.support.ui.WebDriverWait;
++//import org.testng.Assert;
++//import org.testng.annotations.AfterClass;
++//import org.testng.annotations.BeforeClass;
++//import org.testng.annotations.Test;
++//
++//import java.time.Duration;
++//import java.util.List;
++//
++//public class EmailSortingTest {
++//
++//    private WebDriver driver;
++//
++//    @BeforeClass
++//    public void setUp() {
++//        ChromeOptions options = new ChromeOptions();
++//        options.addArguments("--headless");
++//        driver = new ChromeDriver(options);
++//    }
++//
++//    @Test
++//    public void testEmailSorting() {
++//        driver.get("http://phonebook.telran-edu.de:8080/contacts");
++//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
++//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
++//        driver.findElement(By.name("username")).sendKeys("test@gmail.com");
++//        driver.findElement(By.name("password")).sendKeys("test@gmail.com");
++//        driver.findElement(By.cssSelector("button[type='submit']")).click();
++//
++//        driver.findElement(By.xpath("//th[text()='Email']")).click();
++//
++//        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//th[text()='Email' and @aria-sort='ascending']")));
++//
++//        List<WebElement> emailElements = driver.findElements(By.xpath("//td[contains(@data-label,'Email')]"));
++//
++//        for (int i = 1; i < emailElements.size(); i++) {
++//            String email1 = emailElements.get(i - 1).getText();
++//            String email2 = emailElements.get(i).getText();
++//            Assert.assertTrue(email1.compareTo(email2) <= 0, "Emails are not in ascending order");
++//        }
++//    }
++//
++//    @AfterClass
++//    public void tearDown() {
++//        if (driver != null) {
++//            driver.quit();
++//        }
++//    }
++//}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"996645d6-44d4-4db8-b01c-10cdb987cdf3\" name=\"Changes\" comment=\"Deleted back Email and UserCanWorkWithEmailInNewContact\">\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/e2e/LoginTest.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/enums/UserCredentials.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <task path=\"$PROJECT_DIR$\">\n          <activation />\n        </task>\n        <projects_view>\n          <tree_state>\n            <expand>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"phoneBook53-58-1222-e-qa\" type=\"f1a62948:ProjectNode\" />\n              </path>\n            </expand>\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n        <option value=\"Enum\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FormatOnSaveOptions\">\n    <option name=\"myRunOnSave\" value=\"true\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <excluded-from-favorite>\n      <branch-storage>\n        <map>\n          <entry type=\"LOCAL\">\n            <value>\n              <list>\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"master\" />\n              </list>\n            </value>\n          </entry>\n          <entry type=\"REMOTE\">\n            <value>\n              <list>\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/master\" />\n              </list>\n            </value>\n          </entry>\n        </map>\n      </branch-storage>\n    </excluded-from-favorite>\n    <favorite-branches>\n      <branch-storage>\n        <map>\n          <entry type=\"LOCAL\">\n            <value>\n              <list>\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"Leonid_Mikhailov\" />\n              </list>\n            </value>\n          </entry>\n          <entry type=\"REMOTE\">\n            <value>\n              <list>\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/Leonid_Mikhailov\" />\n              </list>\n            </value>\n          </entry>\n        </map>\n      </branch-storage>\n    </favorite-branches>\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Irasp_Andreasian\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"1faeacc8-6b67-4318-a68c-6fefc9110fd2\" />\n        <option name=\"url\" value=\"https://github.com/LeonadO555/phonebook53-58-1222-e-qa\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"OptimizeOnSaveOptions\">\n    <option name=\"myRunOnSave\" value=\"true\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2RFcinJtjugmbocJrfRXxJZr6A6\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"git-widget-placeholder\": \"Leonid__Mikhailov\",\n    \"last_opened_file_path\": \"/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.0\",\n    \"project.structure.side.proportion\": \"0.0\",\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/test/java/ui\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"e2e.pages\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"TestNG.LoginTest\">\n    <configuration name=\"CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"phoneBook53-58-1222-e-qa.test\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"e2e.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"e2e\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.CreateContactViaApiEditContactViaUiTest\" />\n      <option name=\"METHOD_NAME\" value=\"createContactViaApiEditContactViaUiTest\" />\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"LoginTest\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"phoneBook53-58-1222-e-qa.test\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"e2e.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"e2e\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.LoginTest\" />\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"LoginTest.userCanLoginWithValidData\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"phoneBook53-58-1222-e-qa.test\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"e2e.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"e2e\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.LoginTest\" />\n      <option name=\"METHOD_NAME\" value=\"userCanLoginWithValidData\" />\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"LoginTest.userCanNotLoginWithInvalidEmail\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"phoneBook53-58-1222-e-qa.test\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"e2e.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"e2e\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.LoginTest\" />\n      <option name=\"METHOD_NAME\" value=\"userCanNotLoginWithInvalidEmail\" />\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"phoneBook53-58-1222-e-qa.test\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"e2e.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"e2e\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.UserCanWorkWithEmailInNewContact\" />\n      <option name=\"METHOD_NAME\" value=\"userCanWorkWithEmailInNewContact\" />\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"TestNG.LoginTest\" />\n        <item itemvalue=\"TestNG.LoginTest.userCanNotLoginWithInvalidEmail\" />\n        <item itemvalue=\"TestNG.LoginTest.userCanLoginWithValidData\" />\n        <item itemvalue=\"TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest\" />\n        <item itemvalue=\"TestNG.UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"996645d6-44d4-4db8-b01c-10cdb987cdf3\" name=\"Changes\" comment=\"\" />\n      <created>1686849398577</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1686849398577</updated>\n      <workItem from=\"1690914639845\" duration=\"4258000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"first commit\">\n      <created>1686859331973</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1686859331973</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"second commit\">\n      <created>1687291875110</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1687291875110</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"added HashMap\">\n      <created>1687455642962</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1687455642962</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Added test\">\n      <created>1687465370871</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1687465370871</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Deleted import\">\n      <created>1687465445983</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1687465445983</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Added 2 lines\">\n      <created>1688496960846</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688496960846</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"222\">\n      <created>1688499878232</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688499878233</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"4444\">\n      <created>1688499911566</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688499911566</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"removed 1 line\">\n      <created>1688500355420</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688500355420</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Described 2 confing for run tests (testng)\">\n      <created>1689275646019</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1689275646019</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Fixed conflict\">\n      <created>1690809420688</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1690809420689</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Rolled back Email and UserCanWorkWithEmailInNewContact\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1690914445669</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1690914445669</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Deleted back Email and UserCanWorkWithEmailInNewContact\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1690916063101</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1690916063103</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"14\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"first commit\" />\n    <MESSAGE value=\"second commit\" />\n    <MESSAGE value=\"added HashMap\" />\n    <MESSAGE value=\"Added test\" />\n    <MESSAGE value=\"Deleted import\" />\n    <MESSAGE value=\"Added 2 lines\" />\n    <MESSAGE value=\"222\" />\n    <MESSAGE value=\"4444\" />\n    <MESSAGE value=\"removed 1 line\" />\n    <MESSAGE value=\"Described 2 confing for run tests (testng)\" />\n    <MESSAGE value=\"Fixed conflict\" />\n    <MESSAGE value=\"Rolled back Email and UserCanWorkWithEmailInNewContact\" />\n    <MESSAGE value=\"Deleted back Email and UserCanWorkWithEmailInNewContact\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Deleted back Email and UserCanWorkWithEmailInNewContact\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 866b23837e603f4e9d05dfcb0d89e3ef64eea293)
++++ b/.idea/workspace.xml	(date 1691942412672)
+@@ -5,11 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Deleted back Email and UserCanWorkWithEmailInNewContact">
+-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/LoginTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/enums/UserCredentials.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/api/email/Email.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/EmailSortingTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,8 +44,8 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Interface" />
+-        <option value="Class" />
+         <option value="Enum" />
++        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -123,24 +122,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "Leonid__Mikhailov",
+-    "last_opened_file_path": "/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Leonid__Mikhailov&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/test/java/ui" />
+@@ -149,8 +148,8 @@
+       <recent name="e2e.pages" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="TestNG.LoginTest">
+-    <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="TestNG.EmailSortingTest.testEmailSorting">
++    <configuration name="EmailSortingTest.testEmailSorting" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="phoneBook53-58-1222-e-qa.test" />
+       <extension name="coverage">
+         <pattern>
+@@ -159,8 +158,8 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="e2e" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
+-      <option name="METHOD_NAME" value="createContactViaApiEditContactViaUiTest" />
++      <option name="MAIN_CLASS_NAME" value="e2e.EmailSortingTest" />
++      <option name="METHOD_NAME" value="testEmailSorting" />
+       <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+@@ -221,7 +220,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="phoneBook53-58-1222-e-qa.test" />
+       <extension name="coverage">
+         <pattern>
+@@ -230,8 +229,8 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="e2e" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithEmailInNewContact" />
+-      <option name="METHOD_NAME" value="userCanWorkWithEmailInNewContact" />
++      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithAddressInNewContact" />
++      <option name="METHOD_NAME" value="userCanWorkWithAddressInNewContact" />
+       <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+@@ -241,11 +240,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="TestNG.EmailSortingTest.testEmailSorting" />
++        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
+         <item itemvalue="TestNG.LoginTest" />
+         <item itemvalue="TestNG.LoginTest.userCanNotLoginWithInvalidEmail" />
+         <item itemvalue="TestNG.LoginTest.userCanLoginWithValidData" />
+-        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
+-        <item itemvalue="TestNG.UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -352,7 +351,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1690916063103</updated>
+     </task>
+-    <option name="localTasksCounter" value="14" />
++    <task id="LOCAL-00014" summary="Deleted back Email and UserCanWorkWithEmailInNewContact">
++      <option name="closed" value="true" />
++      <created>1691784855711</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1691784855711</updated>
++    </task>
++    <option name="localTasksCounter" value="15" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
