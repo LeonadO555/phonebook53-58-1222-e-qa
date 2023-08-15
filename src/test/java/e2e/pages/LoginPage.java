@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.IOException;
+
 public class LoginPage extends PageBase {
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -56,5 +58,9 @@ public class LoginPage extends PageBase {
 
     public void clickOnForgotPasswordLink() {
         click(forgotPasswordLink);
+    }
+
+    public void takeScreenshotLoginButton() throws IOException {
+        takeAndCompareScreenshot("loginButton", loginButton);
     }
 }

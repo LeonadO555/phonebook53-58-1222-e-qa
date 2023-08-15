@@ -27,4 +27,5 @@ public class ContactPage extends PageBase {
     public void openContactById(String contactId) {
         makeRowLocatorById(contactId).click();
     }
+
 }

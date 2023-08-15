@@ -1,0 +1,19 @@
+Index: src/test/resources/testngSMOKE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<!DOCTYPE suite SYSTEM \"https://testng.org/testng-1.0.dtd\">\n<suite name=\"UserSmoke\" verbose=\"1\">\n    <test name=\"UserSmokeTests\">\n        <classes>\n            <class name=\"e2e.CreateContactViaApiEditContactViaUiTest\"/>\n            <class name=\"e2e.UserCanWorkWithAddressInNewContact\"/>\n            <class name=\"e2e.UserCanCreateEditDeleteContactViaApiTest\"/>\n        </classes>\n    </test>\n</suite>
+===================================================================
+diff --git a/src/test/resources/testngSMOKE.xml b/src/test/resources/testngSMOKE.xml
+--- a/src/test/resources/testngSMOKE.xml	
++++ b/src/test/resources/testngSMOKE.xml	
+@@ -4,8 +4,8 @@
+     <test name="UserSmokeTests">
+         <classes>
+             <class name="e2e.CreateContactViaApiEditContactViaUiTest"/>
+-            <class name="e2e.UserCanWorkWithAddressInNewContact"/>
+             <class name="e2e.UserCanCreateEditDeleteContactViaApiTest"/>
++            <class name="e2e.UserCanWorkWithAddressInNewContact"/>
+         </classes>
+     </test>
+ </suite>
+\ No newline at end of file
