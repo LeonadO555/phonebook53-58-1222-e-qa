@@ -21,7 +21,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     ContactInfoPage contactInfoPage;
     Faker faker = new Faker();
 
-    @Test(description = "New test")
+    @Test(description = "User can edit contact which was created")
     public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
