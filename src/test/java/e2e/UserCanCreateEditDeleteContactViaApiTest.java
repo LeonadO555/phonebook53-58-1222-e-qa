@@ -1,6 +1,7 @@
 package e2e;
 
 import api.contact.Contact;
+import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +15,11 @@ public class UserCanCreateEditDeleteContactViaApiTest {
     Contact contact;
 
     @Test
-    public void userCanCreateEditDeleteContactViaApiTest() {
+    @Description("create, edit, delete contact via api")
+    @Story("Contact")
+    @Feature("Contact")
+    @Severity(SeverityLevel.MINOR)
+    public void createEditDeleteContactViaApiTest() {
         contact = new Contact();
         // create new contact TODO: POST
         JsonPath createdContact = contact.createContact(201).jsonPath();

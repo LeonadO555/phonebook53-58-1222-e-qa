@@ -2,6 +2,7 @@ package e2e;
 
 import api.address.Address;
 import api.contact.Contact;
+import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONException;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -14,7 +15,11 @@ public class UserCanWorkWithAddressInNewContact {
     Address address;
 
     @Test
-    public void userCanWorkWithAddressInNewContact() throws JSONException {
+    @Description("Work with address in new contact")
+    @Story("Contact")
+    @Feature("Addresses")
+    @Severity(SeverityLevel.NORMAL)
+    public void workWithAddressInNewContact() throws JSONException {
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
         int contactId = createdContact.getInt("id");

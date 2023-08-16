@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="fixed test">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added Allure">
+      <change afterPath="$PROJECT_DIR$/expectedScreenshot/tmploginPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -93,7 +94,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Leonid_Mikhailov" />
+        <entry key="$PROJECT_DIR$" value="Leonid_Mikhailov_AllureTestOps" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,12 +126,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Leonid__Mikhailov&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -141,7 +147,24 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngSmoke.xml">
+  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest">
+    <configuration name="CreateContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
@@ -160,7 +183,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
         <pattern>
@@ -169,16 +192,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanCreateEditDeleteContactViaApiTest" />
-      <option name="METHOD_NAME" value="userCanCreateEditDeleteContactViaApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="e2e.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.userCanLoginWithValidData" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
         <pattern>
@@ -187,8 +209,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithAddressInNewContact" />
-      <option name="METHOD_NAME" value="userCanWorkWithAddressInNewContact" />
+      <option name="MAIN_CLASS_NAME" value="e2e.LoginTest" />
+      <option name="METHOD_NAME" value="userCanLoginWithValidData" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -196,20 +218,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngApi.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.userCanNotLoginWithInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngApi.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.LoginTest" />
+      <option name="METHOD_NAME" value="userCanNotLoginWithInvalidEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -218,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
-        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
+        <item itemvalue="TestNG.LoginTest.userCanNotLoginWithInvalidEmail" />
+        <item itemvalue="TestNG.LoginTest.userCanLoginWithValidData" />
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
-        <item itemvalue="TestNG./Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" />
-        <item itemvalue="TestNG./Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngApi.xml" />
+        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -234,6 +254,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686849398577</updated>
+      <workItem from="1690914639845" duration="4258000" />
+      <workItem from="1692127934263" duration="602000" />
+      <workItem from="1692128579580" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1686859331973</created>
@@ -312,36 +335,35 @@
       <option name="project" value="LOCAL" />
       <updated>1690809420689</updated>
     </task>
-    <task id="LOCAL-00012" summary="Fixed conflict">
-      <created>1690911550771</created>
+    <task id="LOCAL-00012" summary="Rolled back Email and UserCanWorkWithEmailInNewContact">
+      <option name="closed" value="true" />
+      <created>1690914445669</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1690911550771</updated>
+      <updated>1690914445669</updated>
     </task>
-    <task id="LOCAL-00013" summary="break test">
-      <created>1691017112298</created>
+    <task id="LOCAL-00013" summary="Deleted back Email and UserCanWorkWithEmailInNewContact">
+      <option name="closed" value="true" />
+      <created>1690916063101</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1691017112298</updated>
+      <updated>1690916063103</updated>
     </task>
-    <task id="LOCAL-00014" summary="fixed test">
-      <created>1691018758758</created>
+    <task id="LOCAL-00014" summary="Added screenshot">
+      <option name="closed" value="true" />
+      <created>1692120892135</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1691018758758</updated>
+      <updated>1692120892135</updated>
     </task>
-    <task id="LOCAL-00015" summary="fixed test">
-      <created>1692120791195</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1692120791195</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -366,9 +388,10 @@
     <MESSAGE value="removed 1 line" />
     <MESSAGE value="Described 2 confing for run tests (testng)" />
     <MESSAGE value="Fixed conflict" />
-    <MESSAGE value="break test" />
-    <MESSAGE value="fixed test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed test" />
+    <MESSAGE value="Rolled back Email and UserCanWorkWithEmailInNewContact" />
+    <MESSAGE value="Deleted back Email and UserCanWorkWithEmailInNewContact" />
+    <MESSAGE value="Added screenshot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added screenshot" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
