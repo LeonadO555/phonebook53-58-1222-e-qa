@@ -61,7 +61,7 @@ public class PageBase {
         int screenHeight = screenSize.height;
 
         double maxDiffPercent = 0.01 * screenWidth * screenHeight;
-
+        // ProcessBuilder pb = new ProcessBuilder("C:\Program Files\ImageMagick\compare.exe", "-metric", "AE", expectedImageFilePath, tmpFilePath, "null:");
         ProcessBuilder pb = new ProcessBuilder("compare", "-metric", "AE", expectedImageFilePath, tmpFilePath, "null:");
         Process process = pb.start();
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
