@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="fixed test">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_19_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_19_51__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_19_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_19_57__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_15_08_2023_19_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_15_08_2023_19_59__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_15_08_2023_19_59__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_15_08_2023_19_59__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanCreateEditDeleteContactViaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteContactViaApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithAddressInNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +154,24 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest">
+  <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest">
+    <configuration name="CreateContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
@@ -165,7 +190,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
         <pattern>
@@ -174,26 +199,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanCreateEditDeleteContactViaApiTest" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateEditDeleteContactViaApiTest" />
       <option name="METHOD_NAME" value="userCanCreateEditDeleteContactViaApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithAddressInNewContact" />
-      <option name="METHOD_NAME" value="userCanWorkWithAddressInNewContact" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -223,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest" />
+        <item itemvalue="TestNG.CreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
         <item itemvalue="TestNG./Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" />
         <item itemvalue="TestNG./Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/resources/testngApi.xml" />
-        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
-        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +373,8 @@
     <MESSAGE value="Fixed conflict" />
     <MESSAGE value="break test" />
     <MESSAGE value="fixed test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed test" />
+    <MESSAGE value="added" />
+    <option name="LAST_COMMIT_MESSAGE" value="added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

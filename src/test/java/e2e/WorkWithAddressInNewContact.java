@@ -2,18 +2,20 @@ package e2e;
 
 import api.address.Address;
 import api.contact.Contact;
+import io.qameta.allure.Description;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONException;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.testng.annotations.Test;
 
-public class UserCanWorkWithAddressInNewContact {
+public class WorkWithAddressInNewContact {
 
     Contact contact;
     Address address;
 
     @Test
+    @Description("User can edit address which was created")
     public void userCanWorkWithAddressInNewContact() throws JSONException {
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
