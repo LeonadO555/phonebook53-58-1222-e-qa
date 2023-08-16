@@ -1,8 +1,11 @@
 package e2e.pages;
 
+import enums.UserCredentials;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.io.IOException;
 
 public class LoginPage extends PageBase {
     public LoginPage(WebDriver driver) {
@@ -34,7 +37,7 @@ public class LoginPage extends PageBase {
         getWait().forClickable(loginButton);
     }
 
-    public void login() {
+    public void login(UserCredentials validEmail, UserCredentials validPassword) {
         emailInput.sendKeys("test@gmail.com");
         passwordInput.sendKeys("test@gmail.com");
         click(loginButton);
@@ -50,5 +53,9 @@ public class LoginPage extends PageBase {
 
     public void clickOnForgotPasswordLink() {
         click(forgotPasswordLink);
+    }
+
+    public void takeScreenshotLoginPage() throws IOException {
+        takeAndCompareScreenshot("LoginPage", null);
     }
 }
