@@ -37,6 +37,7 @@ public class LoginPage extends PageBase {
         getWait().forClickable(loginButton);
     }
 
+
     public void login(UserCredentials email, UserCredentials password) {
         emailInput.sendKeys(email.value);
         passwordInput.sendKeys(password.value);
@@ -62,5 +63,6 @@ public class LoginPage extends PageBase {
 
     public void takeScreenshotLoginButton() throws IOException {
         takeAndCompareScreenshot("loginButton", loginButton);
+
     }
 }
