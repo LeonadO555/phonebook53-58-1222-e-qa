@@ -1,6 +1,5 @@
 package e2e.pages;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,14 +36,12 @@ public class LoginPage extends PageBase {
         getWait().forClickable(loginButton);
     }
 
-    @Step("login with user: test@gmail.com")
     public void login() {
         emailInput.sendKeys("test@gmail.com");
         passwordInput.sendKeys("test@gmail.com");
         click(loginButton);
     }
 
-    @Step("confirm successful login")
     public void confirmSuccessfulLogin() {
         getWait().forInvisibility(loginForm);
     }

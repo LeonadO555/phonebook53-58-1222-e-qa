@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="fixed test">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added screenshots">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/loginButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/loginPage.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanCreateEditDeleteContactViaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteContactViaApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/UserCanWorkWithAddressInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithAddressInNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteContactViaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteContactViaApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithAddressInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithAddressInNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +352,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692128370444</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added allure annotations">
+      <created>1692210601013</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1692210601013</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added screenshots">
+      <created>1692210620243</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1692210620243</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,7 +394,9 @@
     <MESSAGE value="Fixed conflict" />
     <MESSAGE value="break test" />
     <MESSAGE value="fixed test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed test" />
+    <MESSAGE value="Added allure annotations" />
+    <MESSAGE value="Added screenshots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added screenshots" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
