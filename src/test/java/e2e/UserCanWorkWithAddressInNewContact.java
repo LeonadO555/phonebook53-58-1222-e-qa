@@ -2,7 +2,10 @@ package e2e;
 
 import api.address.Address;
 import api.contact.Contact;
-import io.qameta.allure.*;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONException;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -14,8 +17,7 @@ public class UserCanWorkWithAddressInNewContact {
     Contact contact;
     Address address;
 
-    @Test
-    @Description("Work with address in new contact")
+    @Test(description = "Work with address in new contact")
     @Story("Contact")
     @Feature("Addresses")
     @Severity(SeverityLevel.NORMAL)
