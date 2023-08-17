@@ -17,7 +17,7 @@ public class CreateEditDeleteContactViaApiTest {
     @Test
     @Description("Create,edit,contact via api")
     @Story("Contact")
-    @Feature("Address")
+    @Feature("Contact api")
     @Severity(SeverityLevel.NORMAL)
     public void userCanCreateEditDeleteContactViaApiTest() {
         contact = new Contact();
