@@ -3,8 +3,8 @@
 <suite name="UserApi" verbose="1">
     <test name="UserApiTests">
         <classes>
-            <class name="e2e.UserCanCreateEditDeleteContactViaApiTest"/>
-            <class name="e2e.UserCanWorkWithAddressInNewContact"/>
+            <class name="e2e.CreateEditDeleteContactViaApiTest"/>
+            <class name="e2e.WorkWithAddressInNewContact"/>
         </classes>
     </test>
 </suite>

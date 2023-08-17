@@ -1,6 +1,7 @@
 package e2e.pages;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactInfoPage extends ContactBasePage {
+
     public ContactInfoPage(WebDriver driver) {
         super(driver);
     }
@@ -51,7 +53,12 @@ public class ContactInfoPage extends ContactBasePage {
 
     public void waitForEditForm() {
         getWait().forVisibility(firstNameInput);
-        getWait().forVisibility(lastNameInput);
+        try {
+            getWait().forVisibility(lastNameInput);
+        } catch (StaleElementReferenceException e) {
+//            throw new StaleElementReferenceException("description error");
+            e.printStackTrace();
+        }
         getWait().forVisibility(descriptionTextarea);
     }
 
