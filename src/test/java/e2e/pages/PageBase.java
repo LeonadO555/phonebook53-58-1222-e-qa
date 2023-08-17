@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.rmi.RemoteException;
 
 public class PageBase {
     public WebDriver driver;
@@ -48,21 +49,19 @@ public class PageBase {
         } else {
             tmp = element.getScreenshotAs(OutputType.FILE);
         }
-
         Files.copy(tmp.toPath(), new File(tmpFilePath).toPath(), StandardCopyOption.REPLACE_EXISTING);
 
         File expectedImageFile = new File(expectedImageFilePath);
         if (!expectedImageFile.exists()) {
-            throw new RuntimeException("Expected image file does not exist" + expectedImageFilePath);
+            throw new RemoteException("Expected image file does not exist" + expectedImageFilePath);
         }
-
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int screenWidth = screenSize.width;
         int screenHeight = screenSize.height;
 
         double maxDiffPercent = 0.01 * screenWidth * screenHeight;
 
-        ProcessBuilder pb = new ProcessBuilder("compare", "-metric", "AE", expectedImageFilePath, tmpFilePath, "null:");
+        ProcessBuilder pb = new ProcessBuilder("C:\\Program Files (x86)\\ImageMagick\\compare.exe", "-metric", "AE", expectedImageFilePath, tmpFilePath, "null:");
         Process process = pb.start();
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
         String line;
@@ -76,7 +75,6 @@ public class PageBase {
         if (difference > maxDiffPercent) {
             throw new RuntimeException(expectedImageFilePath + "not equal" + tmpFilePath + "difference:" + difference);
         }
-
         Files.deleteIfExists(new File(tmpFilePath).toPath());
     }
 }
