@@ -21,7 +21,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     ContactInfoPage contactInfoPage;
     Faker faker = new Faker();
 
-    @Test
+    @Test(description = "User can edit, delete contact which was created")
     public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
@@ -35,7 +35,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login();
-        loginPage.takeAndCompareScreenshot("loginPageScreenshot", null);
+        loginPage.takeAndCompareScreenshot("loginPageScreenshot3", null);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
