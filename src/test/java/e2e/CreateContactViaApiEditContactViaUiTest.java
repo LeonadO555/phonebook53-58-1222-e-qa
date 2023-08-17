@@ -7,6 +7,7 @@ import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
 import enums.UserCredentials;
+import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -22,7 +23,11 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
     ContactInfoPage contactInfoPage;
     Faker faker = new Faker();
 
-    @Test(description = "User can edit contact which was created")
+    @Test
+    @Description("User can edit contact which was created")
+    @Story("")
+    @Feature("Contact")
+    @Severity(SeverityLevel.CRITICAL)
     public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
@@ -43,7 +48,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactPage = new ContactPage(app.driver);
         contactPage.waitForLoading();
         contactPage.openContactById(String.valueOf(id));
-
+        //open contact info page
         contactInfoPage = new ContactInfoPage(app.driver);
         contactInfoPage.waitForLoading();
         contactInfoPage.clickOnButton(ContactButtons.EDIT);
