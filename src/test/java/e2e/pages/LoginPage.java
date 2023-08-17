@@ -1,7 +1,6 @@
 package e2e.pages;
 
 import enums.UserCredentials;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,7 +37,7 @@ public class LoginPage extends PageBase {
         getWait().forClickable(loginButton);
     }
 
-    @Step("login with user: test@gmail.com")
+
     public void login(UserCredentials email, UserCredentials password) {
         emailInput.sendKeys(email.value);
         passwordInput.sendKeys(password.value);
@@ -46,7 +45,6 @@ public class LoginPage extends PageBase {
     }
 
 
-    @Step("confirm successful login")
     public void confirmSuccessfulLogin() {
         getWait().forInvisibility(loginForm);
     }

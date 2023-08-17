@@ -17,7 +17,7 @@ public class WorkWithAddressInNewContact {
     @Test
     @Description("Work with address in new contact")
     @Story("Contact")
-    @Feature("Addresses")
+    @Feature("Addresses api")
     @Severity(SeverityLevel.NORMAL)
     public void userCanWorkWithAddressInNewContact() throws JSONException {
         contact = new Contact();
