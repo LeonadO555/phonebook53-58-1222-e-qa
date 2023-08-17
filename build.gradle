@@ -1,9 +1,18 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.10.0'
 }
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
+
+
+allure {
+    version = '2.10.0'
+    autoconfigure = true
+    aspectjweaver = true
+}
+
 
 repositories {
     mavenCentral()
@@ -20,6 +29,8 @@ dependencies {
     implementation group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '4.2.0'
     testImplementation 'org.skyscreamer:jsonassert:1.5.0'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.7'
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.10.0'
+
 }
 
 test {
