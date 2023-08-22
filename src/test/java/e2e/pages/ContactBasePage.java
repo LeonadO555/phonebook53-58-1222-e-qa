@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ContactBasePage extends PageBase {
+
     public ContactBasePage(WebDriver driver) {
         super(driver);
     }
