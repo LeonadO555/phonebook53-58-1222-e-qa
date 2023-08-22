@@ -1,6 +1,10 @@
 package e2e;
 
 import api.contact.Contact;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,10 +14,13 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class UserCanCreateEditDeleteContactViaApiTest {
+public class CreateEditDeleteContactViaApiTest {
     Contact contact;
 
-    @Test
+    @Test(description = "Create, edit, delete contact via Api")
+    @Feature("Contact")
+    @Story("Contact api")
+    @Severity(SeverityLevel.NORMAL)
     public void userCanCreateEditDeleteContactViaApiTest() {
         contact = new Contact();
         // create new contact TODO: POST
