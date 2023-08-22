@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added @Description,@Story">
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/email/email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/tmploginButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteContactViaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteContactViaApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithAddressInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithAddressInNewContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" afterDir="false" />
     </list>
@@ -96,7 +94,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Leonid_Mikhailov_AllureTestOps" />
+        <entry key="$PROJECT_DIR$" value="Natalie_Kovalchuk" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -149,6 +147,26 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest">
+    <configuration name="C:/Users/ACER/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngApi.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngApi.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/ACER/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngSmoke.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
@@ -167,7 +185,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
         <pattern>
@@ -176,25 +194,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.CreateEditDeleteContactViaApiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateEditDeleteContactViaApiTest.CreateEditDeleteContactViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.CreateEditDeleteContactViaApiTest" />
-      <option name="METHOD_NAME" value="CreateEditDeleteContactViaApiTest" />
+      <option name="MAIN_CLASS_NAME" value="e2e.UserCanCreateEditDeleteContactViaApiTest" />
+      <option name="METHOD_NAME" value="userCanCreateEditDeleteContactViaApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -202,7 +203,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.userCanNotLoginWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
         <pattern>
@@ -211,25 +212,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.LoginTest" />
-      <option name="METHOD_NAME" value="userCanNotLoginWithInvalidPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.WorkWithAddressInNewContact" />
+      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithAddressInNewContact" />
       <option name="METHOD_NAME" value="userCanWorkWithAddressInNewContact" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -241,10 +224,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
-        <item itemvalue="TestNG.CreateEditDeleteContactViaApiTest.CreateEditDeleteContactViaApiTest" />
-        <item itemvalue="TestNG.WorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
-        <item itemvalue="TestNG.LoginTest.userCanNotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.CreateEditDeleteContactViaApiTest" />
+        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
+        <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
+        <item itemvalue="TestNG.C:/Users/ACER/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngSmoke.xml" />
+        <item itemvalue="TestNG.C:/Users/ACER/IdeaProjects/phonebook53-58-1222-e-qa/src/test/resources/testngApi.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -383,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692293180314</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added @Description,@Story">
+      <created>1692295431767</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1692295431767</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
