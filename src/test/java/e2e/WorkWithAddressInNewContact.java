@@ -2,19 +2,26 @@ package e2e;
 
 import api.address.Address;
 import api.contact.Contact;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONException;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.testng.annotations.Test;
 
-public class UserCanWorkWithAddressInNewContact {
+public class WorkWithAddressInNewContact {
 
     Contact contact;
     Address address;
 
-    @Test
-    public void userCanWorkWithAddressInNewContact() throws JSONException {
+    @Test(description = "Work with address in  new contact")
+    @Feature("Contact")
+    @Story("Addresses api")
+    @Severity(SeverityLevel.NORMAL)
+    public void workWithAddressInNewContact() throws JSONException {
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
         int contactId = createdContact.getInt("id");
