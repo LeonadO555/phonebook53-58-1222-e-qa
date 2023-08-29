@@ -14,7 +14,7 @@ public class ContactBasePage extends PageBase {
 
     @FindBy(xpath = "//*[@id='search']")
     WebElement inlineFilter;
-
+    
     @FindBy(xpath = "//*[@role='dialog']")
     WebElement dialog;
 

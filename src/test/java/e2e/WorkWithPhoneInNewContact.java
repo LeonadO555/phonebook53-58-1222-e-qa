@@ -6,6 +6,11 @@ import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
+import enums.UserCredentials;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,14 +19,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateContactViaApiEditContactViaUiTest extends TestBase {
+public class WorkWithPhoneInNewContact extends TestBase {
+
     Contact contact;
     LoginPage loginPage;
     ContactPage contactPage;
     ContactInfoPage contactInfoPage;
     Faker faker = new Faker();
 
-    @Test(description = "User can edit, delete contact which was created")
+    @Test(description = "User can add, edit and delete phone for new contact")
+    @Feature("Phone")
+    @Story("Phone page")
+    @Severity(SeverityLevel.CRITICAL)
     public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
@@ -34,8 +43,9 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login();
-        loginPage.takeAndCompareScreenshot("loginPageScreenshot1", null);
+//        loginPage.takeScreenshotLoginButton();
+//        loginPage.takeAndCompareScreenshot("loginPage", null);
+        loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
@@ -48,7 +58,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
         contactInfoPage.waitForEditForm();
         contactInfoPage.setEditForm(editFirstName, editLastName, editDescription);
         boolean visibleStatus = contactInfoPage.saveChanges();
-        Assert.assertFalse(visibleStatus, "Save button is visible");
+        Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
         contactInfoPage.waitForLoading();
         List<String> actualEditedContact = contactInfoPage.getEditForm();
         List<String> expectedEditedContact = new ArrayList<>();
