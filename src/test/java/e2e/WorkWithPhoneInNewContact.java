@@ -6,7 +6,6 @@ import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
-import enums.UserCredentials;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -26,12 +25,11 @@ public class WorkWithPhoneInNewContact extends TestBase {
     ContactInfoPage contactInfoPage;
     Faker faker = new Faker();
 
-    @Test(description = "User can edit und delete Phone for new contact")
-    @Feature("Contact")
-    @Story("")
-    @Severity(SeverityLevel.CRITICAL);
-
-    public void createContactViaApiEditContactViaUiTest() {
+    @Test(description = "User can add, edit and delete phone for new contact")
+    @Feature("Phone")
+    @Story("Phone page")
+    @Severity(SeverityLevel.CRITICAL)
+    public void createContactViaApiEditContactViaUiTest() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
         String editDescription = faker.internet().uuid();
