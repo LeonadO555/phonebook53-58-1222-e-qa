@@ -30,7 +30,7 @@ public class WorkWithPhoneInNewContact extends TestBase {
     @Feature("Contact")
     @Story("")
     @Severity(SeverityLevel.CRITICAL)
-    public void createContactViaApiEditContactViaUiTest() throws IOException {
+    public void workWitthPhoneInNewContact() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
         String editDescription = faker.internet().uuid();

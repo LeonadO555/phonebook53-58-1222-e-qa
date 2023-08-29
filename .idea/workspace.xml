@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added @Description,@Story">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/phone/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/enums/CountryCodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/schemas/PhoneDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_21_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_21_13__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_21_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_08_2023_21_14__Changes_.xml" beforeDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added Test Phone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692293180314</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added Test Phone">
+      <created>1692906933528</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1692906933528</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,7 +415,8 @@
     <MESSAGE value="compare screenshot" />
     <MESSAGE value="Added allure" />
     <MESSAGE value="Added @Description,@Story" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added @Description,@Story" />
+    <MESSAGE value="Added Test Phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Test Phone" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
