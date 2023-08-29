@@ -6,7 +6,6 @@ import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
-import enums.UserCredentials;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -16,8 +15,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class WorkWithPhoneInNewContact extends TestBase {
 
@@ -43,9 +40,7 @@ public class WorkWithPhoneInNewContact extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-//        loginPage.takeScreenshotLoginButton();
-//        loginPage.takeAndCompareScreenshot("loginPage", null);
-        loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
+        loginPage.login();
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
@@ -60,11 +55,7 @@ public class WorkWithPhoneInNewContact extends TestBase {
         boolean visibleStatus = contactInfoPage.saveChanges();
         Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
         contactInfoPage.waitForLoading();
-        List<String> actualEditedContact = contactInfoPage.getEditForm();
-        List<String> expectedEditedContact = new ArrayList<>();
-        expectedEditedContact.add(editFirstName);
-        expectedEditedContact.add(editLastName);
-        expectedEditedContact.add(editDescription);
-        Assert.assertEquals(actualEditedContact, expectedEditedContact);
+
+
     }
 }

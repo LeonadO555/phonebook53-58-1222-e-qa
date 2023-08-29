@@ -6,6 +6,7 @@ import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
+import enums.UserCredentials;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -41,9 +42,7 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-//        loginPage.takeScreenshotLoginButton();
-//        loginPage.takeAndCompareScreenshot("loginPage", null);
-        loginPage.login();
+        loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
