@@ -27,10 +27,10 @@ public class WorkWithPhoneInNewContact extends TestBase {
     Faker faker = new Faker();
 
     @Test(description = "User can edit und delete Phone for new contact")
-    @Feature("Contact")
+    @Feature("Phone")
     @Story("")
     @Severity(SeverityLevel.CRITICAL)
-    public void workWitthPhoneInNewContact() throws IOException {
+    public void workWithPhoneInNewContact() throws IOException {
         String editFirstName = faker.internet().uuid();
         String editLastName = faker.internet().uuid();
         String editDescription = faker.internet().uuid();
