@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="allureTestOps2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/phone/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/AddressesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/enums/UserCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/schemas/PhoneDto.java" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="phone">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/CountryCodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/loginPageScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/expectedScreenshot/loginPageScreenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/loginPageScreenshot2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/loginPageScreenshot3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/tmploginPageScreenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/tmploginPageScreenshot2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expectedScreenshot/tmploginPageScreenshot3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactBasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactBasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PageBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -363,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692296070666</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="phone">
+      <created>1693331302580</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693331302580</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,7 +387,8 @@
     <MESSAGE value="screenshot2" />
     <MESSAGE value="allureTestOps" />
     <MESSAGE value="allureTestOps2" />
-    <option name="LAST_COMMIT_MESSAGE" value="allureTestOps2" />
+    <MESSAGE value="phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="phone" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
