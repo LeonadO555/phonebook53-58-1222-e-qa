@@ -9,6 +9,7 @@ import enums.ContactButtons;
 import enums.ContactTabs;
 import enums.UserCredentials;
 import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -25,9 +26,7 @@ public class SortingEmailForContactHW extends TestBase {
 
     @Test
     public void sortingEmailForContactHW() throws IOException {
-        String editFirstName = faker.internet().uuid();
-        String editLastName = faker.internet().uuid();
-        String editDescription = faker.internet().uuid();
+        String editedContactEmail = faker.internet().emailAddress();
 
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
@@ -46,10 +45,19 @@ public class SortingEmailForContactHW extends TestBase {
         emailPage = new EmailPage(app.driver);
         emailPage.waitForLoading();
         emailPage.clickOnEmailsTab(ContactTabs.EMAILS);
-        emailPage.clickOnButton(ContactButtons.ADD_PHONE_NUMBER);
-//        emailPage.waitForEditDialog();
-//        emailPage.setAddPhoneDialog(CountryCodes.FRANCE.getDescription(), editEmail);
-//        boolean visibleStatus = emailPage.saveChanges();
-//        Assert.assertFalse(visibleStatus, "Save button is visible");
+        for (int i = 0; i < 3; i++) {
+            String contactEmail = faker.internet().emailAddress();
+            addEmail(contactEmail);
+            Assert.assertTrue(emailPage.makeCellEmail(contactEmail));
+        }
     }
+
+    private void addEmail(String contactEmail) {
+        emailPage.clickOnButton(ContactButtons.ADD_EMAIL);
+        emailPage.waitForLoading();
+        emailPage.setEmail(contactEmail);
+        emailPage.clickSaveButton();
+    }
+
+
 }

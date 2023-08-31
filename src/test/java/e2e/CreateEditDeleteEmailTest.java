@@ -49,6 +49,7 @@ public class CreateEditDeleteEmailTest extends TestBase {
         emailPage.setEmail(contactEmail);
         emailPage.clickSaveButton();
         Assert.assertTrue(emailPage.makeCellEmail(contactEmail));
+
         email = new Email();
         JsonPath createdEmail = email.getEmail(200, contactId).jsonPath();
         int emailId = createdEmail.getInt("[0].id");

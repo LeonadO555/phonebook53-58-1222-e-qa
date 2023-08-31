@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment=" loginPage.login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/util/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -389,17 +388,6 @@
     <MESSAGE value="Described 2 confing for run tests (testng)" />
     <MESSAGE value="Fixed conflict" />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
