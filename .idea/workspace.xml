@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment=" loginPage.login">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/enums/ContactInfoTabs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateContactViaApiEditContactViaUiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactBasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactBasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactInfoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/util/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +31,12 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="phoneBook53-58-1222-e-qa" type="f1a62948:ProjectNode" />
+                <item name="phonebook53-58-1222-last_version" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="phonebook53-58-1222-last_version" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -149,8 +150,8 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTest.userCanNotLoginWithInvalidData">
-    <configuration name="CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CreateEditDeleteEmailTest.createEditDeleteEmailTest">
+    <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,7 +164,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;e2e.CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest&quot;" />
+            <option value="&quot;e2e.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateEditDeleteEmailTest.createEditDeleteEmailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.CreateEditDeleteEmailTest.createEditDeleteEmailTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -219,29 +243,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.userCanNotLoginWithInvalidEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;e2e.LoginTest.userCanNotLoginWithInvalidEmail&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="LoginTest.userCanNotLoginWithInvalidPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -267,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CreateEditDeleteEmailTest.createEditDeleteEmailTest" />
+        <item itemvalue="Gradle.LoginTest.userCanLoginWithValidData" />
+        <item itemvalue="Gradle.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
         <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidData" />
         <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidPassword" />
-        <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidEmail" />
-        <item itemvalue="Gradle.LoginTest.userCanLoginWithValidData" />
-        <item itemvalue="Gradle.CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -388,6 +389,17 @@
     <MESSAGE value="Described 2 confing for run tests (testng)" />
     <MESSAGE value="Fixed conflict" />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

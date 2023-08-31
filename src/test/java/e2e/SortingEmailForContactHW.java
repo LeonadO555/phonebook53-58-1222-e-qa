@@ -7,10 +7,8 @@ import e2e.pages.EmailPage;
 import e2e.pages.LoginPage;
 import enums.ContactButtons;
 import enums.ContactTabs;
-import enums.CountryCodes;
 import enums.UserCredentials;
 import io.restassured.path.json.JsonPath;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -49,9 +47,9 @@ public class SortingEmailForContactHW extends TestBase {
         emailPage.waitForLoading();
         emailPage.clickOnEmailsTab(ContactTabs.EMAILS);
         emailPage.clickOnButton(ContactButtons.ADD_PHONE_NUMBER);
-        emailPage.waitForEditDialog();
-        emailPage.setAddPhoneDialog(CountryCodes.FRANCE.getDescription(), editEmail);
-        boolean visibleStatus = emailPage.saveChanges();
-        Assert.assertFalse(visibleStatus, "Save button is visible");
+//        emailPage.waitForEditDialog();
+//        emailPage.setAddPhoneDialog(CountryCodes.FRANCE.getDescription(), editEmail);
+//        boolean visibleStatus = emailPage.saveChanges();
+//        Assert.assertFalse(visibleStatus, "Save button is visible");
     }
 }

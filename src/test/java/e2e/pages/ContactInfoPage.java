@@ -57,6 +57,21 @@ public class ContactInfoPage extends ContactBasePage {
         getWait().forVisibility(descriptionTextarea);
     }
 
+
+//  Пример как отлавливать Exception, который возник в ошибке, используя try catch. Это костыль для того, чтобы тест проходил
+//    public void waitForEditForm() {
+//        getWait().forVisibility(firstNameInput);
+//    try {
+//        getWait().forVisibility(lastNameInput);
+//        } catch (StaleElementReferenceException e) {
+//            throw new StaleElementReferenceException("description error"); // самописная ошибка
+//             или
+//             e.printStackTrace(); // это печать ошибки в консоли
+//        }
+//    }
+//        getWait().forVisibility(descriptionTextarea);
+//    }
+
     public void setEditForm(String firstName, String lastName, String description) {
         firstNameInput.click();
         firstNameInput.clear();
