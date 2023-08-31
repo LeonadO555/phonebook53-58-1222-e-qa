@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="not finished PhonePage class on the lesson 29.08">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="finished PhonePage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" afterDir="false" />
@@ -382,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692906990882</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="finished PhonePage">
+      <created>1693508629978</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1693508629978</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,7 +427,8 @@
     <MESSAGE value="fixed test" />
     <MESSAGE value="fixed 1 problem after previous merge" />
     <MESSAGE value="added tests for Phone page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests for Phone page" />
+    <MESSAGE value="finished PhonePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished PhonePage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

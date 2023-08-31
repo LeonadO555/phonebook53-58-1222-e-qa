@@ -39,12 +39,16 @@ public class PhonePage extends ContactBasePage {
     @FindBy(xpath = "//*[@class = 'dropdown-item btn-phone-edit']")
     WebElement editButton;
 
-    @FindBy(xpath = "//*[@class = 'dropdown-item btn-phone-edit']")
+    @FindBy(xpath = "//*[@class = 'dropdown-item btn-phone-remove']")
     WebElement removeButton;
 
     public void waitForLoading() {
         getWait().forVisibility(addPhoneNumberButton);
         getWait().forClickable(addPhoneNumberButton);
+    }
+
+    public void clickAddPhoneButton() {
+        addPhoneNumberButton.click();
     }
 
     public void waitForDialog() {
@@ -75,15 +79,37 @@ public class PhonePage extends ContactBasePage {
         Assert.assertEquals(toastText, "Phone  changed");
     }
 
-    public WebElement makeCellRow(String phone) {
+//    public WebElement makeCountryCodeCellLocator(CountryCodes countryCode) {
+//        return driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-cc']/ancestor::tr//*[@ng-reflect-result, '" + countryCode + "']"));
+//    }
+
+    public String getTextFromCountryCodeCell(String countryCode) {
+        WebElement element = driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-cc']/ancestor::tr//*[@ng-reflect-result, '" + countryCode + "']"));
+        return element.getText();
+    }
+
+    public WebElement makePhoneNumberCellLocator(String phone) {
         return driver.findElement(By.xpath("//*[contains(@ng-reflect-result, '" + phone + "')]"));
     }
 
-    public boolean isVisiblePhone(String phone) {
-        return makeCellRow(phone).isDisplayed();
+    public String getTextFromPhoneNumberCell(String phoneNumber) {
+        WebElement element = driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-pn']//*[contains(text(), '" + phoneNumber + "')]"));
+        return element.getText();
     }
 
-    public void openDropdown(String phone) { //gear button
+    public boolean isVisiblePhone(String phone) { //можно проверить видимый ли номер телефона
+        return makePhoneNumberCellLocator(phone).isDisplayed();
+    }
+
+    public void openGearDropdown(String phone) { //gear button
         driver.findElement(By.xpath("//*[contains(@ng-reflect-result, '" + phone + ")]/ancestor::tr//*[@class='nav-item ml-auto dropdown']")).click();
+    }
+
+    public void openEditDropdown() {
+        editButton.click();
+    }
+
+    public void openRemoveDropdown() {
+        removeButton.click();
     }
 }
