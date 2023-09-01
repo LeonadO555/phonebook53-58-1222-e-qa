@@ -8,9 +8,10 @@ import schemas.ContactDto;
 public class Contact extends ApiBase {
     Response response;
     ContactDto dto;
-    Faker faker = new Faker();
+
 
     public ContactDto randomDataForCreateContact() {
+        Faker faker = new Faker();
         dto = new ContactDto();
         dto.setFirstName(faker.internet().uuid());
         dto.setLastName(faker.internet().uuid());
