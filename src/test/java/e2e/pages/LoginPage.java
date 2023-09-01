@@ -34,7 +34,7 @@ public class LoginPage extends PageBase {
         getWait().forVisibility(loginForm);
         getWait().forVisibility(emailInput);
         getWait().forVisibility(passwordInput);
-        getWait().forClickable(loginButton);
+//        getWait().forClickable(loginButton);
     }
 
     public void login(UserCredentials email, UserCredentials password) {

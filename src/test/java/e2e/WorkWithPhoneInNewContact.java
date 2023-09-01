@@ -90,6 +90,5 @@ public class WorkWithPhoneInNewContact extends TestBase {
         phone.getPhone(200, id);
         contact.deleteContact(200, id);
         contact.getContact(200, id);
-
     }
 }

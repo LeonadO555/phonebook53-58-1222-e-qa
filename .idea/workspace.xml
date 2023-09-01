@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="finished PhonePage">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Test WorkWithPhoneInNewContact need to be verified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,8 +150,8 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact">
-    <configuration name="LoginTest.userCanNotLoginWithInvalidPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.WorkWithPhoneInNewContact.workWithPhoneInNewContact">
+    <configuration name="WorkWithPhoneInNewContact.workWithPhoneInNewContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;e2e.LoginTest.userCanNotLoginWithInvalidPassword&quot;" />
+            <option value="&quot;e2e.WorkWithPhoneInNewContact.workWithPhoneInNewContact&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -246,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.WorkWithPhoneInNewContact.workWithPhoneInNewContact" />
         <item itemvalue="TestNG.UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact" />
         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest" />
         <item itemvalue="TestNG.WorkWithAddressInNewContact.workWithAddressInNewContact" />
         <item itemvalue="TestNG.CreateContactViaApiAddPhoneViaUiTest.createContactViaApiEditContactViaUiTest" />
-        <item itemvalue="Gradle.LoginTest.userCanNotLoginWithInvalidPassword" />
       </list>
     </recent_temporary>
   </component>

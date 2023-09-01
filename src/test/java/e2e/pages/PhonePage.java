@@ -30,7 +30,7 @@ public class PhonePage extends ContactBasePage {
     @FindBy(xpath = "//*[@id='selected-cc']")
     WebElement phoneNumberInput;
 
-    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    @FindBy(xpath = "//*[@type='submit']")
     WebElement savePhoneButton;
 
     @FindBy(xpath = "//*[@class='toast-body']")
@@ -56,16 +56,24 @@ public class PhonePage extends ContactBasePage {
     }
 
     public void setForm(CountryCodes countryCode, String phoneNumber) {
-        selectDropdownText(countryCodeDropdown, countryCode.code);
+        selectDropdownText(countryCodeDropdown, countryCode.description);
         phoneNumberInput.click();
         phoneNumberInput.clear();
         phoneNumberInput.sendKeys(phoneNumber);
     }
 
+//    public void setForm(CountryCodes countryCode, String phoneNumber) {
+//        Select select = new Select(countryCodeDropdown);
+//        select.selectByVisibleText(countryCode.code);
+//        phoneNumberInput.click();
+//        phoneNumberInput.sendKeys(phoneNumber);
+//    }
+
+
     public boolean saveChanges() {
-        savePhoneButton.click();
         try {
             savePhoneButton.isDisplayed();
+            savePhoneButton.click();
             return true;
         } catch (NoSuchElementException e) {
             e.printStackTrace();
