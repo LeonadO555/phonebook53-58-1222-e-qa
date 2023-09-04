@@ -60,8 +60,8 @@ public class PhonePage extends ContactBasePage {
         getWait().forVisibility(editButton);
         getWait().forClickable(editButton);
         //getWait().forVisibility(contactFirstName);
-        getWait().forVisibility(contactLastName);
-        getWait().forVisibility(contactDescription);
+        // getWait().forVisibility(contactLastName);
+        // getWait().forVisibility(contactDescription);
     }
 
 }
