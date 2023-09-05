@@ -1,7 +1,6 @@
 package e2e;
 
 import api.contact.Contact;
-import api.phone.Phone;
 import com.github.javafaker.Faker;
 import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
@@ -27,8 +26,6 @@ public class WorkWithPhoneInNewContact extends TestBase {
     ContactPage contactPage;
     ContactInfoPage contactInfoPage;
     PhonePage phonePage;
-
-    Phone phone;
 
     Faker faker = new Faker();
 
@@ -64,31 +61,60 @@ public class WorkWithPhoneInNewContact extends TestBase {
         phonePage.waitForLoading();
         phonePage.clickAddPhoneButton();
         phonePage.waitForDialog();
-        phonePage.setForm(CountryCodes.UKRAINE, phoneNumber);
+        phonePage.setAddPhoneDialog(CountryCodes.UKRAINE.getDescription(), phoneNumber);
+//        phonePage.setForm(CountryCodes.UKRAINE, phoneNumber);
         boolean visibleStatus = phonePage.saveChanges();
         Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
-        contactInfoPage.waitForLoading();
-        phonePage.handleSuccessfulToast();
-//        phonePage.isVisiblePhone(phone);
 
+
+        // удостовериться, что диалог исчез
+        //   phonePage.confirmSaveDialogClosed();
+
+        // проверяем уведомления (тост))
+        phonePage.handleSuccessfulToast();
+        phonePage.isVisiblePhone(phoneNumber);
+
+        // проверяем, что сохранился CountryCode
         String actualCountryCode = phonePage.getTextFromCountryCodeCell(CountryCodes.UKRAINE.getCode());
         Assert.assertEquals(actualCountryCode, CountryCodes.UKRAINE.getCode(), "Actual phone number does not match  expected");
 
+        // проверяем, что сохранился CountryCode
         String actualPhoneNumber = phonePage.getTextFromPhoneNumberCell(editPhone);
         Assert.assertEquals(actualPhoneNumber, editPhone, "Actual phone number does not match  expected");
 
+        // выбираем редактирование в выпадающем списке
         phonePage.openGearDropdown(phoneNumber);
         phonePage.openEditDropdown();
+
+        // ждем появления диалога редактирования
         phonePage.waitForDialog();
+
+        // заполняем новые данные в инпутах
         phonePage.setForm(CountryCodes.FRANCE, editPhone);
+
+        // сохраняем изменения нажатием на saveButton
         boolean visibleStatusSave = phonePage.saveChanges();
         Assert.assertFalse(visibleStatusSave, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
-        contactInfoPage.waitForLoading();
+
+        // проверяем уведомления (тост))
         phonePage.handleSuccessfulToast();
 
-        phone.deletePhone(200, id);
-        phone.getPhone(200, id);
+        //удаляем телефон
+        phonePage.openGearDropdown(phoneNumber);
+        phonePage.openRemoveDropdown();
+
+//        //или удаляем телефон через API
+//        phone.deletePhone(200, id);
+//        phone.getPhone(200, id);
+//        contact.deleteContact(200, id);
+//        contact.getContact(200, id);
+
+        // удаляем контакт через API
+        // delete edited contact TODO: DELETE
         contact.deleteContact(200, id);
-        contact.getContact(200, id);
+        // get error message (not existing in DB) TODO: GET
+        JsonPath actualDeletedContact = contact.getContact(500, id).jsonPath();
+        Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");
     }
+
 }

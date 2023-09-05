@@ -2,10 +2,11 @@ package e2e.pages;
 
 import enums.CountryCodes;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class PhonePage extends ContactBasePage {
@@ -62,23 +63,36 @@ public class PhonePage extends ContactBasePage {
         phoneNumberInput.sendKeys(phoneNumber);
     }
 
+    public void setAddPhoneDialog(String countryCode, String phoneNumber) {
+        Select select = new Select(countryCodeDropdown);
+        select.selectByVisibleText(countryCode);
+        phoneNumberInput.click();
+        phoneNumberInput.clear();
+        phoneNumberInput.sendKeys(phoneNumber);
+    }
+
 //    public void setForm(CountryCodes countryCode, String phoneNumber) {
 //        Select select = new Select(countryCodeDropdown);
 //        select.selectByVisibleText(countryCode.code);
 //        phoneNumberInput.click();
+//        phoneNumberInput.clear();
 //        phoneNumberInput.sendKeys(phoneNumber);
 //    }
 
 
     public boolean saveChanges() {
         try {
-            savePhoneButton.isDisplayed();
+            // savePhoneButton.isDisplayed();
             savePhoneButton.click();
             return true;
-        } catch (NoSuchElementException e) {
+        } catch (ElementClickInterceptedException e) {
             e.printStackTrace();
             return false;
         }
+    }
+    
+    public void confirmSaveDialogClosed() {
+        getWait().forInvisibility(savePhoneButton);
     }
 
     public void handleSuccessfulToast() {
