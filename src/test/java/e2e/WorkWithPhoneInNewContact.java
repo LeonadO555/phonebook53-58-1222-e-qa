@@ -63,9 +63,10 @@ public class WorkWithPhoneInNewContact extends TestBase {
         phonePage.waitForDialog();
         phonePage.setAddPhoneDialog(CountryCodes.UKRAINE.getDescription(), phoneNumber);
 //        phonePage.setForm(CountryCodes.UKRAINE, phoneNumber);
-        boolean visibleStatus = phonePage.saveChanges();
-        Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
+//        boolean visibleStatus = phonePage.saveChanges();
+//        Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
 
+        phonePage.clickSaveButton();
 
         // удостовериться, что диалог исчез
         //   phonePage.confirmSaveDialogClosed();
@@ -93,8 +94,10 @@ public class WorkWithPhoneInNewContact extends TestBase {
         phonePage.setForm(CountryCodes.FRANCE, editPhone);
 
         // сохраняем изменения нажатием на saveButton
-        boolean visibleStatusSave = phonePage.saveChanges();
-        Assert.assertFalse(visibleStatusSave, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
+        phonePage.clickSaveButton();
+
+//        boolean visibleStatusSave = phonePage.saveChanges();
+//        Assert.assertFalse(visibleStatusSave, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
 
         // проверяем уведомления (тост))
         phonePage.handleSuccessfulToast();

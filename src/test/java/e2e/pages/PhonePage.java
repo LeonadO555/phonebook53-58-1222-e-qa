@@ -2,7 +2,6 @@ package e2e.pages;
 
 import enums.CountryCodes;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -80,17 +79,21 @@ public class PhonePage extends ContactBasePage {
 //    }
 
 
-    public boolean saveChanges() {
-        try {
-            // savePhoneButton.isDisplayed();
-            savePhoneButton.click();
-            return true;
-        } catch (ElementClickInterceptedException e) {
-            e.printStackTrace();
-            return false;
-        }
+//    public boolean saveChanges() {
+//        try {
+//            // savePhoneButton.isDisplayed();
+//            savePhoneButton.click();
+//            return true;
+//        } catch (ElementClickInterceptedException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
+
+    public void clickSaveButton() {
+        savePhoneButton.click();
     }
-    
+
     public void confirmSaveDialogClosed() {
         getWait().forInvisibility(savePhoneButton);
     }
