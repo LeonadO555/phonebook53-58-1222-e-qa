@@ -22,9 +22,9 @@ public class Contact extends ApiBase {
     public ContactDto dataForEditContact(int id) {
         dto = new ContactDto();
         dto.setId(id);
-        dto.setFirstName("Leo");
-        dto.setLastName("Mikhailov");
-        dto.setDescription("I am a teacher");
+        dto.setFirstName("Irasp");
+        dto.setLastName("Andreasian");
+        dto.setDescription("I am a student");
         return dto;
     }
 
