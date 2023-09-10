@@ -45,6 +45,7 @@ public class LoginPage extends PageBase {
 
 
     public void confirmSuccessfulLogin() {
+
         getWait().forInvisibility(loginForm);
     }
 

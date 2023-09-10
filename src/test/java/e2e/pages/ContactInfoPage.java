@@ -1,5 +1,7 @@
 package e2e.pages;
 
+import enums.ContactInfoTabs;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -90,5 +92,9 @@ public class ContactInfoPage extends ContactBasePage {
         listEditedData.add(contactLastName.getText());
         listEditedData.add(contactDescription.getText());
         return listEditedData;
+    }
+
+    public void openTab(ContactInfoTabs tab) {
+        driver.findElement(By.xpath("//*[text()='" + tab.value + "']")).click();
     }
 }

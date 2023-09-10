@@ -14,11 +14,12 @@ public class Email extends ApiBase {
 
     Faker faker = new Faker();
 
+    String email = faker.internet().emailAddress();
     String newEmail = faker.internet().emailAddress();
 
     public EmailDto dataForCreateEmail(int contactId) {
         dto = new EmailDto();
-        dto.setEmail(newEmail);
+        dto.setEmail(email);
         dto.setContactId(contactId);
         return dto;
     }
