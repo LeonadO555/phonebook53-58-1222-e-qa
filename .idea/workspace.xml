@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Deleted back Email and UserCanWorkWithEmailInNewContact">
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment=" Update CreateEditDeleteEmailTest.java">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditSortDeleteEmailsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/SortDirections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/SortDirections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/SortValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/SortValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/util/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,7 +97,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Irasp_Andreasian_AddressTest" />
+        <entry key="$PROJECT_DIR$" value="Irasp_Andreasian" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -114,10 +118,10 @@
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2RFcinJtjugmbocJrfRXxJZr6A6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -150,25 +154,7 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateEditDeleteEmailTest.createEditDeleteEmailTest">
-    <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
-      <option name="METHOD_NAME" value="createContactViaApiEditContactViaUiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.CreateEditSortDeleteEmailsTest.createEditDeleteEmailTest">
     <configuration name="CreateEditDeleteEmailTest.createEditDeleteEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
@@ -179,6 +165,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
       <option name="MAIN_CLASS_NAME" value="e2e.CreateEditDeleteEmailTest" />
+      <option name="METHOD_NAME" value="createEditDeleteEmailTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateEditSortDeleteEmailsTest.createEditDeleteEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateEditSortDeleteEmailsTest" />
       <option name="METHOD_NAME" value="createEditDeleteEmailTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -242,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateEditSortDeleteEmailsTest.createEditDeleteEmailTest" />
         <item itemvalue="TestNG.CreateEditDeleteEmailTest.createEditDeleteEmailTest" />
         <item itemvalue="TestNG.LoginTest.userCanNotLoginWithInvalidEmail" />
         <item itemvalue="TestNG.LoginTest.userCanLoginWithValidData" />
         <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -261,6 +265,9 @@
       <workItem from="1690914639845" duration="4258000" />
       <workItem from="1692817284389" duration="8840000" />
       <workItem from="1692899277094" duration="6195000" />
+      <workItem from="1693766086041" duration="6123000" />
+      <workItem from="1693938385255" duration="1408000" />
+      <workItem from="1694192972633" duration="3608000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1686859331973</created>
