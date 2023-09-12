@@ -83,4 +83,12 @@ public class PhonePage extends ContactBasePage {
     public void openDropDown(String phone) {
         driver.findElement(By.xpath("//*[contains(@ng-reflect-result ,'" + phone + "')]/ancestor::tr//*[@class='nav-item ml-auto dropdown']")).click();
     }
+
+    public void editPhone() {
+        click(editButton);
+    }
+
+    public void deletePhone() {
+        click(removeButton);
+    }
 }

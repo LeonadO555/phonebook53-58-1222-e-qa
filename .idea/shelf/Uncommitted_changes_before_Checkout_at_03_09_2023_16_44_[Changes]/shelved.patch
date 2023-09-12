@@ -1,0 +1,274 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,10 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added screenshots">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_08_2023_19_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_08_2023_19_08__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_08_2023_19_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_08_2023_19_09__Changes_.xml" afterDir="false" />
++    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Added methods for PhonePage and finished PhonePage">
++      <change afterPath="$PROJECT_DIR$/allure-results/146ef01c-6266-44bb-9360-440522d36e56-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/279bd67c-3907-4214-a7a4-4602a2afafd9-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/3217e9b0-81ea-4f0a-9c04-30c59e5cb879-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/3bd13567-f1b5-4f65-868e-bba157882a8c-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/4eb7d4e2-49da-4717-95c1-ca8ba71f2013-result.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/548a207c-7927-4ab0-9b16-44fdebffddfb-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/5d8a33df-d25c-4715-a3d0-7fc9f6127a79-result.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/5df31271-3d90-40c6-95e7-502e418660e4-result.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/81a688ad-f0c5-4462-bcfa-2f8369c62e5e-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/8c2a0570-a6ef-4966-a19d-3e9c27c1948f-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/d2af56b1-cead-4e9e-b68a-753fc79fbb14-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/d7c436df-08ee-45ce-9360-33ccffe98998-container.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/allure-results/eaa6d1ad-f772-4565-9af9-ea9afd45cd6e-container.json" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -120,24 +132,27 @@
+     <option name="myRunOnSave" value="true" />
+   </component>
+   <component name="ProjectId" id="2RFcinJtjugmbocJrfRXxJZr6A6" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;Leonid__Mikhailov&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "Git.Branch.Popup.ShowAllRemotes": "true",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "Leonid__Mikhailov",
++    "last_opened_file_path": "/Users/leonid/IdeaProjects/phoneBook53-58-1222-e-qa/src/test/java/ui",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/test/java/ui" />
+@@ -146,7 +161,7 @@
+       <recent name="e2e.pages" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest">
++  <component name="RunManager" selected="TestNG.WorkWithPhoneInNewContact">
+     <configuration name="phoneBook53-58-1222-e-qa [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+       <ExternalSystemSettings>
+         <option name="executionName" />
+@@ -222,7 +237,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="WorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="WorkWithPhoneInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="phoneBook53-58-1222-e-qa.test" />
+       <extension name="coverage">
+         <pattern>
+@@ -231,9 +246,8 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="e2e" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.WorkWithAddressInNewContact" />
+-      <option name="METHOD_NAME" value="userCanWorkWithAddressInNewContact" />
+-      <option name="TEST_OBJECT" value="METHOD" />
++      <option name="MAIN_CLASS_NAME" value="e2e.WorkWithPhoneInNewContact" />
++      <option name="TEST_OBJECT" value="CLASS" />
+       <properties />
+       <listeners />
+       <method v="2">
+@@ -242,11 +256,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
++        <item itemvalue="TestNG.WorkWithPhoneInNewContact" />
+         <item itemvalue="TestNG.UserCanCreateEditDeleteContactViaApiTest.userCanCreateEditDeleteContactViaApiTest" />
++        <item itemvalue="TestNG.UserCanWorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
+         <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
+         <item itemvalue="Gradle.phoneBook53-58-1222-e-qa [test]" />
+-        <item itemvalue="TestNG.WorkWithAddressInNewContact.userCanWorkWithAddressInNewContact" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -385,7 +399,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1692210620243</updated>
+     </task>
+-    <option name="localTasksCounter" value="19" />
++    <task id="LOCAL-00019" summary="Added methods for PhonePage and finished PhonePage">
++      <created>1693508626046</created>
++      <option name="number" value="00019" />
++      <option name="presentableId" value="LOCAL-00019" />
++      <option name="project" value="LOCAL" />
++      <updated>1693508626046</updated>
++    </task>
++    <option name="localTasksCounter" value="20" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -400,6 +421,7 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="first commit" />
+     <MESSAGE value="second commit" />
+     <MESSAGE value="added HashMap" />
+@@ -415,7 +437,8 @@
+     <MESSAGE value="fixed test" />
+     <MESSAGE value="Added allure annotations" />
+     <MESSAGE value="Added screenshots" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added screenshots" />
++    <MESSAGE value="Added methods for PhonePage and finished PhonePage" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added methods for PhonePage and finished PhonePage" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/test/java/e2e/pages/PhonePage.java
+===================================================================
+diff --git a/src/test/java/e2e/pages/PhonePage.java b/src/test/java/e2e/pages/PhonePage.java
+--- a/src/test/java/e2e/pages/PhonePage.java	
++++ b/src/test/java/e2e/pages/PhonePage.java	
+@@ -44,6 +44,10 @@
+         getWait().forClickable(addPhoneNumberButton);
+     }
+ 
++    public void clickAddPhoneButton() {
++        addPhoneNumberButton.click();
++    }
++
+     public void waitForOpenDialog() {
+         getWait().forVisibility(dialog);
+     }
+@@ -83,4 +87,13 @@
+     public void openDropDown(String phone) {
+         driver.findElement(By.xpath("//*[contains(@ng-reflect-result ,'" + phone + "')]/ancestor::tr//*[@class='nav-item ml-auto dropdown']")).click();
+     }
++
++    public void editPhone() {
++        editButton.click();
++    }
++
++    public void deletePhone() {
++        removeButton.click();
++    }
++
+ }
+\ No newline at end of file
+Index: src/test/java/e2e/WorkWithPhoneInNewContact.java
+===================================================================
+diff --git a/src/test/java/e2e/WorkWithPhoneInNewContact.java b/src/test/java/e2e/WorkWithPhoneInNewContact.java
+--- a/src/test/java/e2e/WorkWithPhoneInNewContact.java	
++++ b/src/test/java/e2e/WorkWithPhoneInNewContact.java	
+@@ -1,38 +1,37 @@
+ package e2e;
+ 
+ import api.contact.Contact;
+-import com.github.javafaker.Faker;
+ import e2e.pages.ContactInfoPage;
+ import e2e.pages.ContactPage;
+ import e2e.pages.LoginPage;
+-import enums.ContactButtons;
++import e2e.pages.PhonePage;
++import enums.ContactTabs;
++import enums.CountryCodes;
+ import io.qameta.allure.Feature;
+ import io.qameta.allure.Severity;
+ import io.qameta.allure.SeverityLevel;
+ import io.qameta.allure.Story;
+ import io.restassured.path.json.JsonPath;
+-import org.testng.Assert;
+ import org.testng.annotations.Test;
+ 
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.List;
+ 
+ public class WorkWithPhoneInNewContact extends TestBase {
+     Contact contact;
+     LoginPage loginPage;
+     ContactPage contactPage;
+     ContactInfoPage contactInfoPage;
+-    Faker faker = new Faker();
++
++    PhonePage phonePage;
++
+ 
+     @Test(description = "User can add, edit and delete phone for new contact")
+     @Feature("Phone")
+     @Story("Phone page")
+     @Severity(SeverityLevel.CRITICAL)
+-    public void createContactViaApiEditContactViaUiTest() throws IOException {
+-        String editFirstName = faker.internet().uuid();
+-        String editLastName = faker.internet().uuid();
+-        String editDescription = faker.internet().uuid();
++    public void workWithPhoneInNewContact() {
++        String phone = "1111111111";
++        String editPhone = "1111111115";
++
+ 
+         contact = new Contact();
+         JsonPath createdContact = contact.createContact(201).jsonPath();
+@@ -50,20 +49,22 @@
+ 
+         contactInfoPage = new ContactInfoPage(app.driver);
+         contactInfoPage.waitForLoading();
+-        contactInfoPage.clickOnButton(ContactButtons.EDIT);
+-        contactInfoPage.waitForEditForm();
+-        contactInfoPage.setEditForm(editFirstName, editLastName, editDescription);
+-        boolean visibleStatus = contactInfoPage.saveChanges();
+-        Assert.assertFalse(visibleStatus, "Save button is visible");
+-        contactInfoPage.waitForLoading();
+-        List<String> actualEditedContact = contactInfoPage.getEditForm();
+-        List<String> expectedEditedContact = new ArrayList<>();
+-        expectedEditedContact.add(editFirstName);
+-        expectedEditedContact.add(editLastName);
+-        expectedEditedContact.add(editDescription);
+-        Assert.assertEquals(actualEditedContact, expectedEditedContact);
++        contactInfoPage.openTab(ContactTabs.PHONES);
+ 
+-        
++        phonePage = new PhonePage(app.driver);
++        phonePage.waitForLoading();
++        phonePage.clickAddPhoneButton();
++        phonePage.waitForOpenDialog();
++        phonePage.setForm(CountryCodes.GERMANY, phone);
++        phonePage.saveChanges();
++        phonePage.handleSuccessfulToast();
++        phonePage.isVisiblePhone(phone);
++        phonePage.setForm(CountryCodes.GERMANY, editPhone);
++        phonePage.saveChanges();
++        phonePage.handleSuccessfulToast();
++        phonePage.isVisiblePhone(editPhone);
++        phonePage.openDropDown(phone);
++        phonePage.deletePhone();
+     }
+ }
+ 
