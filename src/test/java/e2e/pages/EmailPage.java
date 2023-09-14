@@ -1,10 +1,15 @@
 package e2e.pages;
 
 import enums.ContactTabs;
+import enums.SortDirection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmailPage extends ContactInfoPage {
 
@@ -23,6 +28,12 @@ public class EmailPage extends ContactInfoPage {
     @FindBy(xpath = "//*[@class='btn btn-primary']")
     WebElement saveButton;
 
+    @FindBy(xpath = "//*[@id='items-table-email']/tbody/tr[1]")
+    WebElement firstTableRow;
+
+    @FindBy(xpath = "//*[@class='toast-body']")
+    WebElement toast;
+
     @FindBy(xpath = "//*[@class='dropdown-item btn-email-edit']")
     WebElement editButton;
 
@@ -35,13 +46,30 @@ public class EmailPage extends ContactInfoPage {
     @FindBy(xpath = "//*[@class='dropdown-item btn-email-remove']")
     WebElement deleteButton;
 
+    @FindBy(xpath = "//*[@ngbtooltip='click to sort']")
+    WebElement sortDirectionLink;
+
+    @FindBy(xpath = "//*[@class=\"nav navbar row\"]")
+    WebElement navBar;
+
     public void waitForLoading() {
         getWait().forVisibility(emailDialog);
-        getWait().forClickable(saveButton);
+        getWait().forVisibility(saveButton);
+//        getWait().forClickable(saveButton);
+    }
+
+    public void waitForEmailPage() {
+//        getWait().forVisibility(addEmailButton);
+//        getWait().forVisibility(navBar);
+        getWait().forVisibility(firstTableRow);
     }
 
     public void openAddDialog() {
         addEmailButton.click();
+    }
+
+    public void clickOnSortEmailLink() {
+        sortDirectionLink.click();
     }
 
     public void setEmail(String email) {
@@ -73,4 +101,28 @@ public class EmailPage extends ContactInfoPage {
     public void clickOnEmailsTab(ContactTabs emails) {
         driver.findElement(By.xpath(emails.value)).click();
     }
+
+    public void checkSortDirection(SortDirection direction) {
+        driver.findElement(By.xpath(direction.value)).click();
+//        driver.findElement(By.xpath("//*[@ng-reflect-icon-up, '" + direction + "']")).isDisplayed();
+    }
+
+
+    public List<String> getTextFromEmailCell() {
+        List<String> array = new ArrayList<>();
+        List<WebElement> cells = driver.findElements(By.xpath("//*[@class = 'row-table w-95'][1]"));
+        for (WebElement cell : cells) {
+            String text = cell.getText();
+            array.add(text);
+        }
+        return array;
+    }
+
+    public void handleSuccessfulToast() {
+        Assert.assertTrue(toast.isDisplayed(), "Toast is not visible");
+        String toastText = toast.getText();
+        Assert.assertEquals(toastText, "Contact changed");
+    }
+
+
 }

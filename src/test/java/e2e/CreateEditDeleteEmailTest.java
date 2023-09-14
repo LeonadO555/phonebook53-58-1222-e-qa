@@ -48,17 +48,22 @@ public class CreateEditDeleteEmailTest extends TestBase {
         emailPage.openAddDialog();
         emailPage.setEmail(contactEmail);
         emailPage.clickSaveButton();
+        emailPage.waitForEmailPage();
+
         Assert.assertTrue(emailPage.makeCellEmail(contactEmail));
 
         email = new Email();
+        email.createEmail(201, contactId);
         JsonPath createdEmail = email.getEmail(200, contactId).jsonPath();
         int emailId = createdEmail.getInt("[0].id");
+
+
         emailPage.openDropdown(contactEmail);
         emailPage.openEditDialog();
         emailPage.setEmail(editedContactEmail);
         emailPage.clickSaveButton();
-        emailPage.waitForLoading();
-        Assert.assertTrue(emailPage.makeCellEmail(editedContactEmail));
+        emailPage.waitForEmailPage();
+        Assert.assertTrue(emailPage.makeCellEmail(contactEmail));
 
         emailPage.waitForLoading();
         emailPage.openDropdown(editedContactEmail);
@@ -70,6 +75,5 @@ public class CreateEditDeleteEmailTest extends TestBase {
         contact.deleteContact(200, contactId);
         JsonPath actualDeletedContact = contact.getContact(500, contactId).jsonPath();
         Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");
-
     }
 }
