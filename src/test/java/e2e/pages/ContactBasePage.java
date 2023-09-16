@@ -1,7 +1,7 @@
 package e2e.pages;
 
 import enums.ContactButtons;
-import enums.ContactTabs;
+import enums.ContactInfoTabs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,8 +18,8 @@ public class ContactBasePage extends PageBase {
     @FindBy(xpath = "//*[@role='dialog']")
     WebElement dialog;
 
-    public void openTab(ContactTabs tab) {
-        driver.findElement(By.xpath(tab.value)).click();
+    public void openTab(ContactInfoTabs tab) {
+        driver.findElement(By.xpath("//*[text()='" + tab.value + "']")).click();
     }
 
     public void filterBy(String value) {
