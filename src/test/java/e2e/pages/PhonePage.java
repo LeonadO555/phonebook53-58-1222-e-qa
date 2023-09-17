@@ -30,7 +30,7 @@ public class PhonePage extends ContactBasePage {
     @FindBy(xpath = "//*[@id='selected-cc']")
     WebElement phoneNumberInput;
 
-    @FindBy(xpath = "//*[@type='submit']")
+    @FindBy(xpath = "//*[@class = 'btn btn-primary']")
     WebElement savePhoneButton;
 
     @FindBy(xpath = "//*[@class='toast-body']")
@@ -101,7 +101,7 @@ public class PhonePage extends ContactBasePage {
     public void handleSuccessfulToast() {
         Assert.assertTrue(successfulToast.isDisplayed(), "Toast is not visible");
         String toastText = successfulToast.getText();
-        Assert.assertEquals(toastText, "Phone  changed");
+        Assert.assertEquals(toastText, "Phone number saved");
     }
 
 //    public WebElement makeCountryCodeCellLocator(CountryCodes countryCode) {
