@@ -24,7 +24,7 @@ public class CreateEditDeleteEmailTest extends TestBase {
     Faker faker = new Faker();
 
     @Test
-    public void createEditDeleteEmailTest() {
+    public void createEditDeleteEmailTest() throws InterruptedException {
         String contactEmail = faker.internet().emailAddress();
         String editedContactEmail = faker.internet().emailAddress();
         contact = new Contact();
@@ -49,26 +49,23 @@ public class CreateEditDeleteEmailTest extends TestBase {
         emailPage.setEmail(contactEmail);
         emailPage.clickSaveButton();
         emailPage.waitForEmailPage();
-
         Assert.assertTrue(emailPage.makeCellEmail(contactEmail));
 
         email = new Email();
-        email.createEmail(201, contactId);
-        JsonPath createdEmail = email.getEmail(200, contactId).jsonPath();
+        JsonPath createdEmail = email.getAllEmails(200, contactId).jsonPath();
         int emailId = createdEmail.getInt("[0].id");
-
 
         emailPage.openDropdown(contactEmail);
         emailPage.openEditDialog();
         emailPage.setEmail(editedContactEmail);
         emailPage.clickSaveButton();
+        Thread.sleep(2000);
         emailPage.waitForEmailPage();
-        Assert.assertTrue(emailPage.makeCellEmail(contactEmail));
+        Assert.assertTrue(emailPage.makeCellEmail(editedContactEmail));
 
-        emailPage.waitForLoading();
         emailPage.openDropdown(editedContactEmail);
         emailPage.deleteEmail();
-        email = new Email();
+
         JsonPath actualDeletedEmail = email.getEmail(500, emailId).jsonPath();
         Assert.assertEquals(actualDeletedEmail.getString("message"), "Error! This email doesn't exist in our DB");
 
