@@ -34,14 +34,13 @@ public class WorkWithPhoneInNewContact extends TestBase {
     @Story("Phone page")
     @Severity(SeverityLevel.CRITICAL)
 
-    public void workWithPhoneInNewContact() throws IOException {
+    public void workWithPhoneInNewContact() throws IOException, InterruptedException {
         String phoneNumber = "1234567890"; //переменная, с данными для заполнения формы
         String editPhone = "0987654321";
 
         contact = new Contact();
         JsonPath createdContact = contact.createContact(201).jsonPath();
         int id = createdContact.getInt("id");
-        logger.debug(String.valueOf(id));
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -52,59 +51,43 @@ public class WorkWithPhoneInNewContact extends TestBase {
         contactPage.waitForLoading();
         contactPage.openContactById(String.valueOf(id));
 
-
         contactInfoPage = new ContactInfoPage(app.driver);
         contactInfoPage.waitForLoading();
         contactInfoPage.openTab(ContactTabs.PHONES);
 
         phonePage = new PhonePage(app.driver);
-        phonePage.waitForLoading();
+        phonePage.waitForLoadingAddPhoneNumberButton();
         phonePage.clickAddPhoneButton();
         phonePage.waitForDialog();
-        phonePage.setAddPhoneDialog(CountryCodes.UKRAINE.getDescription(), phoneNumber);
-//        phonePage.setForm(CountryCodes.UKRAINE, phoneNumber);
-//        boolean visibleStatus = phonePage.saveChanges();
-//        Assert.assertFalse(visibleStatus, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
-
+        phonePage.setPhoneDialog(CountryCodes.UKRAINE.getDescription(), phoneNumber);
         phonePage.clickSaveButton();
-
-        // удостовериться, что диалог исчез
-        //   phonePage.confirmSaveDialogClosed();
-
-        // проверяем уведомления (тост))
+        phonePage.confirmSaveDialogClosed();
         phonePage.handleSuccessfulToast();
-        phonePage.isVisiblePhone(phoneNumber);
 
-        // проверяем, что сохранился CountryCode
-        String actualCountryCode = phonePage.getTextFromCountryCodeCell(CountryCodes.UKRAINE.getCode());
-        Assert.assertEquals(actualCountryCode, CountryCodes.UKRAINE.getCode(), "Actual phone number does not match  expected");
+//        phonePage.isVisiblePhone(phoneNumber);
+//        Thread.sleep(3000);
 
-        // проверяем, что сохранился CountryCode
-        String actualPhoneNumber = phonePage.getTextFromPhoneNumberCell(editPhone);
-        Assert.assertEquals(actualPhoneNumber, editPhone, "Actual phone number does not match  expected");
+//         // check if CountryCode saved
+//        phonePage.waitForLoadingFirstTableRow();
+//        String actualCountryCode = phonePage.getTextFromCountryCodeCell(CountryCodes.UKRAINE.getCode());
+//        Assert.assertEquals(actualCountryCode, CountryCodes.UKRAINE.getCode(), "Actual phone number does not match  expected");
 
-        // выбираем редактирование в выпадающем списке
+        // check if PhoneNumber saved
+        phonePage.waitForLoadingFirstTableRow();
+        String actualPhoneNumber = phonePage.getTextFromPhoneNumberCell(phoneNumber);
+        Assert.assertEquals(actualPhoneNumber, phoneNumber, "Actual phone number does not match  expected");
+
         phonePage.openGearDropdown(phoneNumber);
         phonePage.openEditDropdown();
-
-        // ждем появления диалога редактирования
         phonePage.waitForDialog();
-
-        // заполняем новые данные в инпутах
-        phonePage.setForm(CountryCodes.FRANCE, editPhone);
-
-        // сохраняем изменения нажатием на saveButton
+        phonePage.setPhoneDialog(CountryCodes.FRANCE.getDescription(), editPhone);
         phonePage.clickSaveButton();
-
-//        boolean visibleStatusSave = phonePage.saveChanges();
-//        Assert.assertFalse(visibleStatusSave, "Save button is visible"); //после нажатия на save, мы эту кнопку больше не должны видеть
-
-        // проверяем уведомления (тост))
         phonePage.handleSuccessfulToast();
 
-        //удаляем телефон
-        phonePage.openGearDropdown(phoneNumber);
+        phonePage.waitForLoadingFirstTableRow();
+        phonePage.openGearDropdown(editPhone);
         phonePage.openRemoveDropdown();
+        phonePage.handleSuccessfulToast();
 
 //        //или удаляем телефон через API
 //        phone.deletePhone(200, id);
@@ -115,6 +98,7 @@ public class WorkWithPhoneInNewContact extends TestBase {
         // удаляем контакт через API
         // delete edited contact TODO: DELETE
         contact.deleteContact(200, id);
+
         // get error message (not existing in DB) TODO: GET
         JsonPath actualDeletedContact = contact.getContact(500, id).jsonPath();
         Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");

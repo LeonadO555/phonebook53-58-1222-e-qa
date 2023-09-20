@@ -1,22 +1,21 @@
 package e2e.pages;
 
-import enums.CountryCodes;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 public class PhonePage extends ContactBasePage {
 
     public PhonePage(WebDriver driver) {
         super(driver);
     }
-
-
-    @FindBy(xpath = "//*[@id = 'ngb-nav-35']")
-    WebElement phonesTab;
 
     @FindBy(xpath = "//*[@class='btn btn-info text-white']")
     WebElement addPhoneNumberButton;
@@ -36,13 +35,19 @@ public class PhonePage extends ContactBasePage {
     @FindBy(xpath = "//*[@class='toast-body']")
     WebElement successfulToast;
 
+    @FindBy(xpath = "//*[@id='items-table-phone']/tbody/tr[1]")
+    WebElement firstTableRow;
+
+    @FindBy(xpath = "//*[@class = 'container']")
+    WebElement pageContainer;
+
     @FindBy(xpath = "//*[@class = 'dropdown-item btn-phone-edit']")
     WebElement editButton;
 
     @FindBy(xpath = "//*[@class = 'dropdown-item btn-phone-remove']")
     WebElement removeButton;
 
-    public void waitForLoading() {
+    public void waitForLoadingAddPhoneNumberButton() {
         getWait().forVisibility(addPhoneNumberButton);
         getWait().forClickable(addPhoneNumberButton);
     }
@@ -55,22 +60,14 @@ public class PhonePage extends ContactBasePage {
         getWait().forVisibility(dialog);
     }
 
-    public void setForm(CountryCodes countryCode, String phoneNumber) {
-        selectDropdownText(countryCodeDropdown, countryCode.description);
-        phoneNumberInput.click();
-        phoneNumberInput.clear();
-        phoneNumberInput.sendKeys(phoneNumber);
-    }
-
-    public void setAddPhoneDialog(String countryCode, String phoneNumber) {
-        Select select = new Select(countryCodeDropdown);
-        select.selectByVisibleText(countryCode);
-        phoneNumberInput.click();
-        phoneNumberInput.clear();
-        phoneNumberInput.sendKeys(phoneNumber);
-    }
-
 //    public void setForm(CountryCodes countryCode, String phoneNumber) {
+//        selectDropdownText(countryCodeDropdown, countryCode.description);
+//        phoneNumberInput.click();
+//        phoneNumberInput.clear();
+//        phoneNumberInput.sendKeys(phoneNumber);
+//    }
+
+    //    public void setForm(CountryCodes countryCode, String phoneNumber) {
 //        Select select = new Select(countryCodeDropdown);
 //        select.selectByVisibleText(countryCode.code);
 //        phoneNumberInput.click();
@@ -78,10 +75,18 @@ public class PhonePage extends ContactBasePage {
 //        phoneNumberInput.sendKeys(phoneNumber);
 //    }
 
+    public void setPhoneDialog(String countryCode, String phoneNumber) {
+        Select select = new Select(countryCodeDropdown);
+        select.selectByVisibleText(countryCode);
+        phoneNumberInput.click();
+        phoneNumberInput.clear();
+        phoneNumberInput.sendKeys(phoneNumber);
+    }
+
 
 //    public boolean saveChanges() {
 //        try {
-//            // savePhoneButton.isDisplayed();
+//            savePhoneButton.isDisplayed();
 //            savePhoneButton.click();
 //            return true;
 //        } catch (ElementClickInterceptedException e) {
@@ -89,6 +94,20 @@ public class PhonePage extends ContactBasePage {
 //            return false;
 //        }
 //    }
+
+//    public boolean saveChanges() {
+//        savePhoneButton.click();
+//        try {
+//            new WebDriverWait(driver, Duration.ofMillis(500)).until(ExpectedConditions.visibilityOf(savePhoneButton));
+//
+////            savePhoneButton.isDisplayed();
+//            return true;
+//        } catch (NoSuchElementException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
+
 
     public void clickSaveButton() {
         savePhoneButton.click();
@@ -98,7 +117,13 @@ public class PhonePage extends ContactBasePage {
         getWait().forInvisibility(savePhoneButton);
     }
 
+    public boolean isVisiblePhone(String phone) { //можно проверить видимый ли номер телефона
+        return makePhoneNumberCellLocator(phone).isDisplayed();
+    }
+
     public void handleSuccessfulToast() {
+        new WebDriverWait(driver, Duration.ofMillis(500)).until(ExpectedConditions.visibilityOf(successfulToast));
+//        getWait().forVisibility(successfulToast);
         Assert.assertTrue(successfulToast.isDisplayed(), "Toast is not visible");
         String toastText = successfulToast.getText();
         Assert.assertEquals(toastText, "Phone number saved");
@@ -108,11 +133,20 @@ public class PhonePage extends ContactBasePage {
 //        return driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-cc']/ancestor::tr//*[@ng-reflect-result, '" + countryCode + "']"));
 //    }
 
+
+    public void waitForLoadingFirstTableRow() {
+        getWait().forVisibility(firstTableRow);
+    }
+
     public String getTextFromCountryCodeCell(String countryCode) {
         WebElement element = driver.findElement(By.xpath("//*[@class='table table-striped']//*[@class='row-table-cc']/ancestor::tr//*[@ng-reflect-result, '" + countryCode + "']"));
         return element.getText();
     }
 
+
+    //    public String makePhoneNumberCellLocator(String phone) {
+//        WebElement element = driver.findElement(By.xpath("//*[contains(@ng-reflect-result, '" + phone + "')]"));
+//        return element.getText();
     public WebElement makePhoneNumberCellLocator(String phone) {
         return driver.findElement(By.xpath("//*[contains(@ng-reflect-result, '" + phone + "')]"));
     }
@@ -122,12 +156,9 @@ public class PhonePage extends ContactBasePage {
         return element.getText();
     }
 
-    public boolean isVisiblePhone(String phone) { //можно проверить видимый ли номер телефона
-        return makePhoneNumberCellLocator(phone).isDisplayed();
-    }
 
-    public void openGearDropdown(String phone) { //gear button
-        driver.findElement(By.xpath("//*[contains(@ng-reflect-result, '" + phone + ")]/ancestor::tr//*[@class='nav-item ml-auto dropdown']")).click();
+    public void openGearDropdown(String phone) {
+        driver.findElement(By.xpath("//*[contains(@ng-reflect-result, '" + phone + "')]/ancestor::tr//*[@class='nav-item ml-auto dropdown']")).click();
     }
 
     public void openEditDropdown() {
