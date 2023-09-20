@@ -9,7 +9,6 @@ public class Contact extends ApiBase {
     Response response;
     ContactDto dto;
 
-
     public ContactDto randomDataForCreateContact() {
         Faker faker = new Faker();
         dto = new ContactDto();
@@ -51,5 +50,4 @@ public class Contact extends ApiBase {
         response = getRequestWithParam(endPoint, code, "id", id);
         return response;
     }
-
 }

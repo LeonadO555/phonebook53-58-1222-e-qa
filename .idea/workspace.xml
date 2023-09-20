@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Test WorkWithPhoneInNewContact need to be verified">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/phone/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/phone/Phone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" afterDir="false" />
     </list>
@@ -394,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693508629978</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned">
+      <created>1695235465975</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1695235465975</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -433,18 +442,8 @@
     <MESSAGE value="fixed 1 problem after previous merge" />
     <MESSAGE value="added tests for Phone page" />
     <MESSAGE value="finished PhonePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished PhonePage" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

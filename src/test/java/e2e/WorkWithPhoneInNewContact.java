@@ -1,7 +1,7 @@
 package e2e;
 
 import api.contact.Contact;
-import com.github.javafaker.Faker;
+import api.phone.Phone;
 import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
@@ -17,25 +17,25 @@ import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
 public class WorkWithPhoneInNewContact extends TestBase {
 
     Contact contact;
+
+    Phone phone;
     LoginPage loginPage;
     ContactPage contactPage;
     ContactInfoPage contactInfoPage;
     PhonePage phonePage;
 
-    Faker faker = new Faker();
+//    Faker faker = new Faker();
 
     @Test(description = "User can add, edit and delete phone for new contact")
     @Feature("Phone")
     @Story("Phone page")
     @Severity(SeverityLevel.CRITICAL)
 
-    public void workWithPhoneInNewContact() throws IOException, InterruptedException {
-        String phoneNumber = "1234567890"; //переменная, с данными для заполнения формы
+    public void workWithPhoneInNewContact() {
+        String phoneNumber = "1234567890";
         String editPhone = "0987654321";
 
         contact = new Contact();
@@ -64,18 +64,10 @@ public class WorkWithPhoneInNewContact extends TestBase {
         phonePage.confirmSaveDialogClosed();
         phonePage.handleSuccessfulToast();
 
-//        phonePage.isVisiblePhone(phoneNumber);
-//        Thread.sleep(3000);
-
-//         // check if CountryCode saved
-//        phonePage.waitForLoadingFirstTableRow();
-//        String actualCountryCode = phonePage.getTextFromCountryCodeCell(CountryCodes.UKRAINE.getCode());
-//        Assert.assertEquals(actualCountryCode, CountryCodes.UKRAINE.getCode(), "Actual phone number does not match  expected");
-
         // check if PhoneNumber saved
         phonePage.waitForLoadingFirstTableRow();
         String actualPhoneNumber = phonePage.getTextFromPhoneNumberCell(phoneNumber);
-        Assert.assertEquals(actualPhoneNumber, phoneNumber, "Actual phone number does not match  expected");
+        Assert.assertEquals(actualPhoneNumber, phoneNumber, "Actual phone number does not match expected");
 
         phonePage.openGearDropdown(phoneNumber);
         phonePage.openEditDropdown();
@@ -84,24 +76,24 @@ public class WorkWithPhoneInNewContact extends TestBase {
         phonePage.clickSaveButton();
         phonePage.handleSuccessfulToast();
 
-        phonePage.waitForLoadingFirstTableRow();
-        phonePage.openGearDropdown(editPhone);
-        phonePage.openRemoveDropdown();
-        phonePage.handleSuccessfulToast();
 
-//        //или удаляем телефон через API
-//        phone.deletePhone(200, id);
-//        phone.getPhone(200, id);
-//        contact.deleteContact(200, id);
-//        contact.getContact(200, id);
+        // 1st variant: delete phone number via UI
+//        phonePage.waitForLoadingFirstTableRow();
+//        phonePage.openGearDropdown(editPhone);
+//        phonePage.openRemoveDropdown();
+//        phonePage.handleSuccessfulToast();
 
-        // удаляем контакт через API
-        // delete edited contact TODO: DELETE
+        // 2nd variant: delete phone number via API
+        phone = new Phone();
+        JsonPath createdPhone = phone.getAllPhones(200, id).jsonPath();
+        int phoneId = createdPhone.getInt("[0].id");
+        phone.deletePhone(200, phoneId);
+
+        // delete edited contact via API TODO: DELETE
         contact.deleteContact(200, id);
 
         // get error message (not existing in DB) TODO: GET
         JsonPath actualDeletedContact = contact.getContact(500, id).jsonPath();
         Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");
     }
-
 }
