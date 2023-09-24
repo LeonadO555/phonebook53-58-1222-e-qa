@@ -9,6 +9,7 @@ public enum SortDirections {
     public final String direction;
 
     SortDirections(String direction) {
+
         this.direction = direction;
     }
 }

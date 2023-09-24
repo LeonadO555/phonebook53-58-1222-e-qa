@@ -9,13 +9,13 @@ import e2e.pages.EmailPage;
 import e2e.pages.LoginPage;
 import enums.ContactInfoTabs;
 import enums.SortDirections;
-import enums.SortValues;
 import enums.UserCredentials;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CreateEditSortDeleteEmailsTest extends TestBase {
@@ -29,7 +29,7 @@ public class CreateEditSortDeleteEmailsTest extends TestBase {
     Faker faker = new Faker();
 
     @Test
-    public void createEditDeleteEmailTest() {
+    public void createEditSortDeleteEmailTest() {
         List<String> emailsToCreate = new ArrayList<>();
         emailsToCreate.add(faker.internet().emailAddress());
         emailsToCreate.add(faker.internet().emailAddress());
@@ -82,11 +82,24 @@ public class CreateEditSortDeleteEmailsTest extends TestBase {
         }
 
         emailPage.waitForLoading();
-        emailPage.clickOnSortLink(SortValues.Email);
+        emailPage.clickOnSortLink();
+        emailPage.checkSortDirection(SortDirections.down);
+        List<String> actualListEmailsColumnDown = emailPage.getTextFromEmailColumn(email.toString());
+        List<String> expectedListEmailsColumnDown = new ArrayList<>(actualListEmailsColumnDown);
+        Collections.sort(expectedListEmailsColumnDown);
+        Assert.assertEquals(actualListEmailsColumnDown, expectedListEmailsColumnDown, "Emails are not sorted");
+
+        emailPage.waitForLoading();
+        emailPage.clickOnSortLink();
         emailPage.checkSortDirection(SortDirections.up);
+        List<String> actualListEmailsColumnUp = emailPage.getTextFromEmailColumn(email.toString());
+        List<String> expectedListEmailsColumnUp = new ArrayList<>(actualListEmailsColumnUp);
+        Collections.sort(expectedListEmailsColumnUp);
+        Assert.assertEquals(actualListEmailsColumnUp, expectedListEmailsColumnUp, "Emails are not sorted");
 
         for (String emailToDelete : editedEmails) {
             emailPage.openDropdown(emailToDelete);
+            emailPage.waitForLoading();
             emailPage.deleteEmail();
             email = new Email();
             JsonPath actualDeletedEmail = email.getEmail(500, emailId).jsonPath();
@@ -95,7 +108,5 @@ public class CreateEditSortDeleteEmailsTest extends TestBase {
         contact.deleteContact(200, contactId);
         JsonPath actualDeletedContact = contact.getContact(500, contactId).jsonPath();
         Assert.assertEquals(actualDeletedContact.getString("message"), "Error! This contact doesn't exist in our DB");
-
     }
 }
-

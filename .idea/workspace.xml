@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment=" Update CreateEditDeleteEmailTest.java">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditSortDeleteEmailsTest.java" afterDir="false" />
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Created CreateEditSortDeleteEmailsTest.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateEditSortDeleteEmailsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditSortDeleteEmailsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/ContactPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/enums/SortDirections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/SortDirections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/SortValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/SortValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/util/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/SortValues.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -120,7 +120,7 @@
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2RFcinJtjugmbocJrfRXxJZr6A6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -142,7 +142,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -154,26 +154,8 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateEditSortDeleteEmailsTest.createEditDeleteEmailTest">
-    <configuration name="CreateEditDeleteEmailTest.createEditDeleteEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.CreateEditDeleteEmailTest" />
-      <option name="METHOD_NAME" value="createEditDeleteEmailTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateEditSortDeleteEmailsTest.createEditDeleteEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CreateEditSortDeleteEmailsTest.createEditSortDeleteEmailTest">
+    <configuration name="CreateEditSortDeleteEmailsTest.createEditSortDeleteEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="phoneBook53-58-1222-e-qa.test" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +165,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="e2e" />
       <option name="MAIN_CLASS_NAME" value="e2e.CreateEditSortDeleteEmailsTest" />
-      <option name="METHOD_NAME" value="createEditDeleteEmailTest" />
+      <option name="METHOD_NAME" value="createEditSortDeleteEmailTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateEditSortDeleteEmailsTest.createEditSortDeleteEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="phoneBook53-58-1222-e-qa.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e" />
+      <option name="MAIN_CLASS_NAME" value="e2e.CreateEditSortDeleteEmailsTest" />
+      <option name="METHOD_NAME" value="createEditSortDeleteEmailTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -246,8 +246,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CreateEditSortDeleteEmailsTest.createEditDeleteEmailTest" />
-        <item itemvalue="TestNG.CreateEditDeleteEmailTest.createEditDeleteEmailTest" />
+        <item itemvalue="TestNG.CreateEditSortDeleteEmailsTest.createEditSortDeleteEmailTest" />
+        <item itemvalue="TestNG.CreateEditSortDeleteEmailsTest.createEditSortDeleteEmailTest" />
         <item itemvalue="TestNG.LoginTest.userCanNotLoginWithInvalidEmail" />
         <item itemvalue="TestNG.LoginTest.userCanLoginWithValidData" />
         <item itemvalue="TestNG.LoginTest" />
@@ -263,11 +263,8 @@
       <option name="presentableId" value="Default" />
       <updated>1686849398577</updated>
       <workItem from="1690914639845" duration="4258000" />
-      <workItem from="1692817284389" duration="8840000" />
-      <workItem from="1692899277094" duration="6195000" />
-      <workItem from="1693766086041" duration="6123000" />
-      <workItem from="1693938385255" duration="1408000" />
-      <workItem from="1694192972633" duration="3608000" />
+      <workItem from="1694538451232" duration="1126000" />
+      <workItem from="1695302575769" duration="25219000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1686859331973</created>

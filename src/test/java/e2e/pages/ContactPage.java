@@ -17,7 +17,7 @@ public class ContactPage extends PageBase {
     WebElement contactList;
 
     public void waitForLoading() {
-        getWait().forVisibility(contactList);
+        getWait().forClickable(contactList);
     }
 
     public WebElement makeRowLocatorById(String contactId) {
@@ -27,5 +27,4 @@ public class ContactPage extends PageBase {
     public void openContactById(String contactId) {
         makeRowLocatorById(contactId).click();
     }
-
 }
