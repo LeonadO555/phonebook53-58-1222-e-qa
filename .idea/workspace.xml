@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned">
+    <list default="true" id="996645d6-44d4-4db8-b01c-10cdb987cdf3" name="Changes" comment="Need to fix error: element click intercepted:">
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/SortDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/contact/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/phone/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/phone/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/WorkWithPhoneInNewContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/PhonePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/CreateEditDeleteEmailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/SortingEmailForContactHW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EmailPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/util/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/Wait.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -101,7 +102,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Galina_Voronkova_EmailTests" />
+        <entry key="$PROJECT_DIR$" value="Galina_Voronkova" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -151,8 +152,8 @@
       <recent name="e2e.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WorkWithPhoneInNewContact.workWithPhoneInNewContact">
-    <configuration name="WorkWithAddressInNewContact.workWithAddressInNewContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SortingEmailForContactHW.sortingEmailForContactHW">
+    <configuration name="CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;e2e.WorkWithAddressInNewContact.workWithAddressInNewContact&quot;" />
+            <option value="&quot;e2e.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,7 +176,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WorkWithPhoneInNewContact.workWithPhoneInNewContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreateEditDeleteEmailTest.createEditDeleteEmailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -188,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;e2e.WorkWithPhoneInNewContact.workWithPhoneInNewContact&quot;" />
+            <option value="&quot;e2e.CreateEditDeleteEmailTest.createEditDeleteEmailTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -198,66 +199,82 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CreateContactViaApiEditContactViaUiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.CreateContactViaApiEditContactViaUiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="LoginTest.userCanLoginWithValidData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.LoginTest.userCanLoginWithValidData&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.UserCanWorkWithEmailInNewContact" />
-      <option name="METHOD_NAME" value="userCanWorkWithEmailInNewContact" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="SortingEmailForContactHW" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.SortingEmailForContactHW&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="WorkWithAddressInNewContact.workWithAddressInNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="phoneBook53-58-1222-e-qa.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e" />
-      <option name="MAIN_CLASS_NAME" value="e2e.WorkWithAddressInNewContact" />
-      <option name="METHOD_NAME" value="workWithAddressInNewContact" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="SortingEmailForContactHW.sortingEmailForContactHW" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;e2e.SortingEmailForContactHW.sortingEmailForContactHW&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WorkWithPhoneInNewContact.workWithPhoneInNewContact" />
-        <item itemvalue="Gradle.WorkWithAddressInNewContact.workWithAddressInNewContact" />
-        <item itemvalue="TestNG.UserCanWorkWithEmailInNewContact.userCanWorkWithEmailInNewContact" />
-        <item itemvalue="TestNG.CreateContactViaApiEditContactViaUiTest" />
-        <item itemvalue="TestNG.WorkWithAddressInNewContact.workWithAddressInNewContact" />
+        <item itemvalue="Gradle.SortingEmailForContactHW.sortingEmailForContactHW" />
+        <item itemvalue="Gradle.CreateEditDeleteEmailTest.createEditDeleteEmailTest" />
+        <item itemvalue="Gradle.SortingEmailForContactHW" />
+        <item itemvalue="Gradle.LoginTest.userCanLoginWithValidData" />
+        <item itemvalue="Gradle.CreateContactViaApiEditContactViaUiTest.createContactViaApiEditContactViaUiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -347,63 +364,7 @@
       <option name="project" value="LOCAL" />
       <updated>1690809420689</updated>
     </task>
-    <task id="LOCAL-00012" summary="Fixed conflict">
-      <created>1690911550771</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1690911550771</updated>
-    </task>
-    <task id="LOCAL-00013" summary="break test">
-      <created>1691017112298</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1691017112298</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fixed test">
-      <created>1691018758758</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1691018758758</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fixed test">
-      <created>1692120791195</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1692120791195</updated>
-    </task>
-    <task id="LOCAL-00016" summary="fixed 1 problem after previous merge">
-      <created>1692727079376</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1692727079376</updated>
-    </task>
-    <task id="LOCAL-00017" summary="added tests for Phone page">
-      <created>1692906990882</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1692906990882</updated>
-    </task>
-    <task id="LOCAL-00018" summary="finished PhonePage">
-      <created>1693508629978</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1693508629978</updated>
-    </task>
-    <task id="LOCAL-00019" summary="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned">
-      <created>1695235465975</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1695235465975</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,15 +372,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ID_WIDTH">
-                <map>
-                  <entry key="Table.Default.Author.ColumnIdWidth" value="40" />
-                  <entry key="Table.Default.Date.ColumnIdWidth" value="42" />
-                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="41" />
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -437,13 +390,18 @@
     <MESSAGE value="removed 1 line" />
     <MESSAGE value="Described 2 confing for run tests (testng)" />
     <MESSAGE value="Fixed conflict" />
-    <MESSAGE value="break test" />
-    <MESSAGE value="fixed test" />
-    <MESSAGE value="fixed 1 problem after previous merge" />
-    <MESSAGE value="added tests for Phone page" />
-    <MESSAGE value="finished PhonePage" />
-    <MESSAGE value="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned" />
-    <option name="LAST_COMMIT_MESSAGE" value="working version of WorkWithPhoneInNewContact test.&#10;Code need to be cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed conflict" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.7.0/966cfce163561e9c0c050cd33852073e8c5d6089/testng-7.7.0-sources.jar!/org/testng/internal/invokers/TestInvoker.java</url>
+          <line>697</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

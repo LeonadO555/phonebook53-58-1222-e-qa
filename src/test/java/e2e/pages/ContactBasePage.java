@@ -19,7 +19,7 @@ public class ContactBasePage extends PageBase {
     @FindBy(xpath = "//*[@role='dialog']")
     WebElement dialog;
 
-    public void openTab(ContactTabs tab) {
+    public void openInfoTab(ContactTabs tab) {
         driver.findElement(By.xpath(tab.value)).click();
     }
 

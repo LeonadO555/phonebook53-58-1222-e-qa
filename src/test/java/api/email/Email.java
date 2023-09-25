@@ -1,6 +1,7 @@
 package api.email;
 
 import api.ApiBase;
+import com.github.javafaker.Faker;
 import io.restassured.response.Response;
 import schemas.EmailDto;
 
@@ -11,9 +12,14 @@ public class Email extends ApiBase {
 
     EmailDto dto;
 
+    Faker faker = new Faker();
+
+    String email = faker.internet().emailAddress();
+    String newEmail = faker.internet().emailAddress();
+
     public EmailDto dataForCreateEmail(int contactId) {
         dto = new EmailDto();
-        dto.setEmail("newmail@gmail.com");
+        dto.setEmail(email);
         dto.setContactId(contactId);
         return dto;
     }
