@@ -6,7 +6,7 @@ import e2e.pages.ContactInfoPage;
 import e2e.pages.ContactPage;
 import e2e.pages.LoginPage;
 import e2e.pages.PhonePage;
-import enums.ContactTabs;
+import enums.ContactInfoTabs;
 import enums.CountryCodes;
 import enums.UserCredentials;
 import io.qameta.allure.Feature;
@@ -53,7 +53,7 @@ public class WorkWithPhoneInNewContact extends TestBase {
 
         contactInfoPage = new ContactInfoPage(app.driver);
         contactInfoPage.waitForLoading();
-        contactInfoPage.openTab(ContactTabs.PHONES);
+        contactInfoPage.openTab(ContactInfoTabs.PHONES);
 
         phonePage = new PhonePage(app.driver);
         phonePage.waitForLoadingAddPhoneNumberButton();
