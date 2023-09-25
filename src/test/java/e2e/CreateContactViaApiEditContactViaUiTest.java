@@ -42,9 +42,9 @@ public class CreateContactViaApiEditContactViaUiTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-//        loginPage.takeScreenshotLoginButton();
-//        loginPage.takeAndCompareScreenshot("loginPage", null);
         loginPage.login(UserCredentials.VALID_EMAIL, UserCredentials.VALID_PASSWORD);
+        //  loginPage.takeScreenshotLoginButton();
+        //  loginPage.takeAndCompareScreenshot("loginPage", null);
         loginPage.confirmSuccessfulLogin();
 
         contactPage = new ContactPage(app.driver);
