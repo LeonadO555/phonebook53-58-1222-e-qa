@@ -1,5 +1,7 @@
 package e2e.pages;
 
+import enums.ContactInfoTabs;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,6 +57,21 @@ public class ContactInfoPage extends ContactBasePage {
         getWait().forVisibility(descriptionTextarea);
     }
 
+
+//  Пример как отлавливать Exception, который возник в ошибке, используя try catch. Это костыль для того, чтобы тест проходил
+//    public void waitForEditForm() {
+//        getWait().forVisibility(firstNameInput);
+//    try {
+//        getWait().forVisibility(lastNameInput);
+//        } catch (StaleElementReferenceException e) {
+//            throw new StaleElementReferenceException("description error"); // самописная ошибка
+//             или
+//             e.printStackTrace(); // это печать ошибки в консоли
+//        }
+//    }
+//        getWait().forVisibility(descriptionTextarea);
+//    }
+
     public void setEditForm(String firstName, String lastName, String description) {
         firstNameInput.click();
         firstNameInput.clear();
@@ -90,5 +107,9 @@ public class ContactInfoPage extends ContactBasePage {
         listEditedData.add(contactLastName.getText());
         listEditedData.add(contactDescription.getText());
         return listEditedData;
+    }
+
+    public void openTab(ContactInfoTabs tab) {
+        driver.findElement(By.xpath("//*[text()='" + tab.value + "']")).click();
     }
 }
